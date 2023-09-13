@@ -7,8 +7,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.heroCarousel}>
-        <Hero />
-        
+        <Hero />       
       </section>
 
       <section className={styles.center}>

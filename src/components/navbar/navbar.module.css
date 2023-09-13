@@ -11,6 +11,8 @@
     right: 0px;
     left: 0px;
     background-color: var(--background-color);
+    opacity: 1;
+    z-index: 99;
 }
 
 .links {

@@ -1,0 +1,69 @@
+.container {
+    
+}
+
+.experiment {
+    /* position: relative; */
+    background: linear-gradient(to right, black, white)
+}
+
+.carouselContainer {
+    border: 1px solid magenta;
+    height: calc(100vh - 100px);
+    /* position: relative; */
+    width: 99vw;
+    
+
+}
+
+.heroImage {
+    /* object-fit: cover;
+    background-size: cover;
+    width:fit-content;
+    height: max-content;
+    transform: scale(1.3);  */
+    /* position: absolute; */
+    /* z-index: 0;*/
+    
+}
+
+.heroContent {
+    position: relative;
+}
+
+.heroImage {
+    /* max-width: 100%;
+    height: auto; */
+    min-width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+/* .gradient {
+    z-index: 1;
+    background-color: blueviolet;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+} */
+
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.) 100%,
+    );
+
+}
+
+.bannerText {
+    background-color: #fff;
+    z-index: 1000;
+    position: relative;
+}

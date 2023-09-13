@@ -4,12 +4,28 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  /* min-width: 1200px; */
+  /* margin-top: 100px; */
+  padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
 }
 
 .heroCarousel {
-  width: 100%;
+  width: 99vw;
+  min-height: calc(100vh - 100px); /*60px is height of navbar*/
+  background-color: aqua;
+  position: relative;
 }
+
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  z-index: 1000;
+}
+
+
 
 /*RESPONSIVENESS STYLING */
 

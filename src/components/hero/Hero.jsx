@@ -1,7 +1,24 @@
 "use client"
 
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
+
+import styles from './hero.module.css';
+import testimage from "../../../public/carousel_1.jpg"
+
+
+// initialise swiper modules
+// SwiperCore.use([Pagination, Autoplay]);
+
 
 const Hero = () => {
 
@@ -31,27 +48,86 @@ const Hero = () => {
                 console.error("Error while fetching data: ", error);
                 setIsLoading(false);
             });
-    }, [])
-
+    }, []);
+    
   return (
-    <div>
+    <div className={styles.container}>
         {isLoading ? (
             <p>Loading...</p>
         ) : (
-            <div>
-                {heroData.Details.map((detail, index) => (
-                    <div key={index}>
-                        <h1>{detail.Title}</h1>
-                        <h3>{detail.Subtitle}</h3>
-                        <Image 
-                            src={detail.ImageUrl}
-                            height={100}
-                            width={100}
-                            alt="slider"
-                        />
-                    </div>
-                ))}
+            // <div>
+            //     {heroData.Details.map((detail, index) => (
+            //         <div key={index}>
+            //             <h1>{detail.Title}</h1>
+            //             <h3>{detail.Subtitle}</h3>
+            //             <Image 
+            //                 src={detail.ImageUrl}
+            //                 height={100}
+            //                 width={100}
+            //                 alt="slider"
+            //             />
+            //         </div>
+            //     ))}
+            // </div>
+            <div className={styles.experiment}>
+                <Swiper
+                    pagination={{
+                    dynamicBullets: true,
+                    clickable: true
+                    }}
+                    autoplay={{delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+                    modules={[Pagination, Navigation, Autoplay]}
+                    loop={true}
+                    slidesPerView={1.0}
+                    className={styles.carouselContainer}
+                >
+                    {/* {heroData.Details.map((detail) => (
+                        <SwiperSlide>
+                            <Image 
+                                src={detail.ImageUrl}
+                                height={0}
+                                width={0}
+                                sizes='100vw'
+                                className={styles.heroImage}
+                            />
+                        </SwiperSlide>
+                    ))} */}
+
+                        <SwiperSlide>
+                            <div className={styles.heroContent}>
+                                <Image 
+                                    src={heroData.Details[0].ImageUrl}
+                                    height={0}
+                                    width={0}
+                                    sizes='100vw'
+                                    className={styles.heroImage}
+                                />
+                                {/* <div className={styles.gradient}></div> */}
+                            </div>
+                            
+                            {/* <div className={styles.bannerText}>
+                                <h1>{heroData.Details[0].Title}</h1>
+                            </div> */}
+                            
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className={styles.heroContent}>
+                                <Image 
+                                    src={heroData.Details[1].ImageUrl}
+                                    height={0}
+                                    width={0}
+                                    sizes='100vw'
+                                    className={styles.heroImage}
+                                />
+                                <div className={styles.gradient}></div>
+                            </div>
+                        </SwiperSlide>                     
+                    
+                </Swiper>
+                
             </div>
+            
         )}       
     </div>
   )
