@@ -1,0 +1,30 @@
+.container {
+    height: 60px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; 
+    border-bottom: 1.5px solid rgba(211, 211, 211, 0.5);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.login {
+    padding: 12px 35px;
+    font-size: 12px;
+    font-weight: 700;
+    color:steelblue;
+    background-color:rgba(137, 173, 246, 0.151);
+    border: none;
+    border-radius: 2px;
+    font-family: inherit;
+    cursor: pointer;
+}
