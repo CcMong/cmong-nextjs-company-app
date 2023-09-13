@@ -8,20 +8,20 @@ const Hero = () => {
     const [heroData, setHeroData] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
-    // Put the fetch within a useEffect so that it is fetched once the page loads. This should occur just once.
+    // Put the fetch within a useEffect so that it is fetched once the component mounts. This should occur just once.
 
     useEffect(() => {
 
         const apiUrl = "https://interview-assessment.api.avamae.co.uk/api/v1/home/banner-details";
 
-        // Fetching the data from the REST Endpoint:
+        // Fetching the data from the REST Endpoint, using fetch to make a GET request:
 
         fetch(apiUrl)
             .then((response) => {
                 if(!response.ok) {
                     throw new Error("Network issues encountered")
                 }
-                return response.json();
+                return response.json(); // Handle the response and parse it as JSON
             })
             .then((result) => { // Store the fetched data in state, and set isLoading to false
                 setHeroData(result);
@@ -50,9 +50,9 @@ const Hero = () => {
                             alt="slider"
                         />
                     </div>
-                ))};
+                ))}
             </div>
-        )};        
+        )}       
     </div>
   )
 }
