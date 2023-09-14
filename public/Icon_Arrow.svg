@@ -6,7 +6,7 @@
 	.st0{fill:#FFFFFF;}
 </style>
 <g>
-	<g>
+	<g transform="rotate(180deg)">
 		<path class="st0" d="M90,1v98L5.13,50L90,1z"/>
 	</g>
 </g>

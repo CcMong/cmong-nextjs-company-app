@@ -14,6 +14,7 @@ import 'swiper/css/autoplay';
 
 import styles from './hero.module.css';
 import testimage from "../../../public/carousel_1.jpg"
+import arrowIcon from "../../../public/Icon_Arrow.svg"
 
 
 // initialise swiper modules
@@ -70,6 +71,12 @@ const Hero = () => {
             //     ))}
             // </div>
             <div className={styles.experiment}>
+                <div className={`${styles.swiperButton} ${styles.swiperButtonNext}`}>
+                    <Image src={arrowIcon} height={10}/>
+                </div>
+                <div className={`${styles.swiperButton} ${styles.swiperButtonBack}`}>
+                    <Image src={arrowIcon} height={10}/>
+                </div>
                 <Swiper
                     pagination={{
                     dynamicBullets: true,
@@ -79,7 +86,11 @@ const Hero = () => {
                     modules={[Pagination, Navigation, Autoplay]}
                     loop={true}
                     slidesPerView={1.0}
-                    navigation
+                    navigation={{
+                        nextEl: `${styles.swiperButtonNext}`,
+                        prevEl: `${styles.swiperButtonBack}`,
+                        disabledClass: `${styles.swiperButtonDisabled}`
+                    }}
                     className={styles.carouselContainer}
                 >
                     {/* {heroData.Details.map((detail) => (

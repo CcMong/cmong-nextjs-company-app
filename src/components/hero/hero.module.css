@@ -1,13 +1,42 @@
 .container {
-    
+    margin: -75px 0px;
 }
 
 .experiment {
-    /* position: relative; */
+    position: relative;
     /* background: linear-gradient(to right, black, white) */
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right, rgba(0, 0, 0, 0.879), rgba(255, 255, 255, 0)
-    );
+    ); */
+}
+
+.swiperButton { /*the div behind/around the navigation pointers*/
+    display: flex;
+  position: absolute;
+  top: calc(50% + 40px);
+  z-index: 10;
+  cursor: pointer;
+  background: #00000031;
+  height: 30px;
+  width: 30px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-left: 10px;
+
+}
+
+.swiperButtonNext {
+    right: -0.1px;
+    transform: rotate(180deg);
+}
+
+.swiperButtonBack {
+    left: 0.1px;
+
+}
+
+.swiperButtonDisabled {
+
 }
 
 .carouselContainer {
@@ -48,8 +77,9 @@
     height: auto; */
     min-width: 100%; /*Image shows with min-width: 100%. Testing...*/
     height: auto;
-    transform: scale(1.5);
-    transform: translateY(-12%)
+    transform: scale(1);
+    transform: translateY(-12%);
+    margin: -15px 0px;
 }
 
 /* .gradient {
