@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import styles from "./page.module.css";
+import ContactForm from '@/components/contactForm/ContactForm';
+import ContactBrand from '@/components/contactBrand/ContactBrand';
 
-const page = () => {
+const Contact = () => {
   return (
-    <div>page</div>
+    <div className={styles.container}>
+      <ContactForm />
+      <ContactBrand />
+    </div>
   )
 }
 
-export default page
+export default Contact;

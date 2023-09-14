@@ -13,7 +13,7 @@
 .heroCarousel {
   width: 99vw;
   min-height: calc(100vh - 100px); /*60px is height of navbar*/
-  background-color: aqua;
+  background-color:t aqua;
   position: relative;
 }
 

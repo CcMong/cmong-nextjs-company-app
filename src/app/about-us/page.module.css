@@ -1,0 +1,7 @@
+.container {
+    max-width: 500px;
+    padding-top: 60px; /*accounting for the nav bar*/
+    min-height: calc(100vh - 60px);
+    margin: 0px 100px;
+}
+

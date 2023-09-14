@@ -79,6 +79,7 @@ const Hero = () => {
                     modules={[Pagination, Navigation, Autoplay]}
                     loop={true}
                     slidesPerView={1.0}
+                    navigation
                     className={styles.carouselContainer}
                 >
                     {/* {heroData.Details.map((detail) => (
@@ -100,7 +101,7 @@ const Hero = () => {
                                     height={0}
                                     width={0}
                                     sizes='100vw'
-                                    className={styles.heroImage}
+                                    className={styles.heroImage1}
                                 />
                                 {/* <div className={styles.gradient}></div> */}
                             </div>
@@ -118,9 +119,9 @@ const Hero = () => {
                                     height={0}
                                     width={0}
                                     sizes='100vw'
-                                    className={styles.heroImage}
+                                    className={styles.heroImage2}
                                 />
-                                <div className={styles.gradient}></div>
+                                {/* <div className={styles.gradient}></div> */}
                             </div>
                         </SwiperSlide>                     
                     

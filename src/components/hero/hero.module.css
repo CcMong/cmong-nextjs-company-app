@@ -4,7 +4,10 @@
 
 .experiment {
     /* position: relative; */
-    background: linear-gradient(to right, black, white)
+    /* background: linear-gradient(to right, black, white) */
+    background: linear-gradient(
+        to right, rgba(0, 0, 0, 0.879), rgba(255, 255, 255, 0)
+    );
 }
 
 .carouselContainer {
@@ -31,12 +34,22 @@
     position: relative;
 }
 
-.heroImage {
+.heroImage1 {
     /* max-width: 100%;
     height: auto; */
-    min-width: 100%;
+    min-width: 100%; /*Image shows with min-width: 100%. Testing...*/
     height: auto;
     transform: scale(1);
+}
+
+
+.heroImage2 {
+    /* max-width: 100%;
+    height: auto; */
+    min-width: 100%; /*Image shows with min-width: 100%. Testing...*/
+    height: auto;
+    transform: scale(1.5);
+    transform: translateY(-12%)
 }
 
 /* .gradient {
@@ -51,13 +64,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.5) 0%,
         rgba(0, 0, 0, 0.1) 50%,
-        rgba(0, 0, 0, 0.) 100%,
+        rgba(0, 0, 0, 0) 100%,
     );
 
 }
@@ -67,3 +80,4 @@
     z-index: 1000;
     position: relative;
 }
+
