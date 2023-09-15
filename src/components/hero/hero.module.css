@@ -10,35 +10,6 @@
     ); */
 }
 
-.swiperButton { /*the div behind/around the navigation pointers*/
-    display: flex;
-  position: absolute;
-  top: calc(50% + 40px);
-  z-index: 10;
-  cursor: pointer;
-  background: #00000031;
-  height: 30px;
-  width: 30px;
-  border-radius: 2px;
-  padding-top: 10px;
-  padding-left: 10px;
-
-}
-
-.swiperButtonNext {
-    right: -0.1px;
-    transform: rotate(180deg);
-}
-
-.swiperButtonBack {
-    left: 0.1px;
-
-}
-
-.swiperButtonDisabled {
-
-}
-
 .carouselContainer {
     border: 1px solid magenta;
     height: calc(100vh - 100px);
@@ -90,7 +61,39 @@
     position: absolute;
 } */
 
+/*Navigation Buttons on the Hero Carousel*/
+
+.swiperButton { /*the div behind/around the navigation pointers*/
+    display: flex;
+  position: absolute;
+  top: calc(50% + 40px);
+  z-index: 10;
+  cursor: pointer;
+  background: #00000031;
+  height: 30px;
+  width: 30px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-left: 10px;
+
+}
+
+.swiperButtonNext {
+    right: -0.1px;
+    transform: rotate(180deg);
+}
+
+.swiperButtonBack {
+    left: 0.1px;
+
+}
+
+.swiperButtonDisabled {
+
+}
+
 .gradient {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;

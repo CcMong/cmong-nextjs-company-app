@@ -71,12 +71,18 @@ const Hero = () => {
             //     ))}
             // </div>
             <div className="heroWrapper">
+                {/* Left Side Gradient Effect, with Text */}
+                <div className="gradient">
+
+                </div>
+                {/* Swiper Navigation Buttons  */}
                 <div className="swiperButton swiperButtonNext">
                     <Image src={arrowIcon} height={10}/>
                 </div>
                 <div className="swiperButton swiperButtonBack">
                     <Image src={arrowIcon} height={10}/>
                 </div>
+                {/* Code for Swiper carousel */}
                 <Swiper
                     pagination={{
                     dynamicBullets: true,
