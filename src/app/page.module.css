@@ -1,4 +1,5 @@
 .main {
+  max-width: 1920px; /*Added to limit width*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;

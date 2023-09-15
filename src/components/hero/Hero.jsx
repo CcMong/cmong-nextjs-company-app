@@ -15,6 +15,7 @@ import 'swiper/css/autoplay';
 import styles from './hero.module.css';
 import testimage from "../../../public/carousel_1.jpg"
 import arrowIcon from "../../../public/Icon_Arrow.svg"
+import Link from 'next/link';
 
 
 // initialise swiper modules
@@ -72,9 +73,7 @@ const Hero = () => {
             // </div>
             <div className="heroWrapper">
                 {/* Left Side Gradient Effect, with Text */}
-                <div className="gradient">
-
-                </div>
+                {/* <div className="gradient"></div> */}
                 {/* Swiper Navigation Buttons  */}
                 <div className="swiperButton swiperButtonNext">
                     <Image src={arrowIcon} height={10}/>
@@ -113,6 +112,16 @@ const Hero = () => {
 
                         <SwiperSlide>
                             <div className={styles.heroContent}>
+                                <div className="gradient"></div>
+                                <div className="bannerContentBox">
+                                    <h1 className="bannerTitle">{heroData.Details[0].Title}</h1>
+                                    <p className='bannerSubtitle'>{heroData.Details[0].Subtitle}</p>
+                                    <Link href="/contact-us">
+                                        <button className='submitButton' type='button'>Contact Us</button>
+                                    </Link>
+                                    
+                                </div>
+                                    
                                 <Image 
                                     src={heroData.Details[0].ImageUrl}
                                     height={0}
@@ -131,6 +140,15 @@ const Hero = () => {
 
                         <SwiperSlide>
                             <div className={styles.heroContent}>
+                            <div className="gradient"></div>
+                                <div className="bannerContentBox">
+                                    <h1 className="bannerTitle">{heroData.Details[1].Title}</h1>
+                                    <p className='bannerSubtitle'>{heroData.Details[1].Subtitle}</p>
+                                    <Link href="/contact-us">
+                                        <button className='submitButton' type='button'>Contact Us</button>
+                                    </Link>
+                                    
+                                </div>
                                 <Image 
                                     src={heroData.Details[1].ImageUrl}
                                     height={0}
