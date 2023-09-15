@@ -14,7 +14,7 @@
     border: 1px solid magenta;
     height: calc(100vh - 100px);
     /* position: relative; */
-    width: 99vw;
+    width: 100vw;
     
 
 }
@@ -59,14 +59,6 @@
     transform: translateY(10%);
 }
 
-/* .gradient {
-    z-index: 1;
-    background-color: blueviolet;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-} */
-
 /*Navigation Buttons on the Hero Carousel*/
 
 .swiperButton { /*the div behind/around the navigation pointers*/
@@ -94,11 +86,7 @@
 
 }
 
-.swiperButtonDisabled {
-
-}
-
-.gradient {
+/* .gradient {
     display: flex;
     position: absolute;
     top: 0;
@@ -124,5 +112,5 @@
   display: flex;
   justify-content: center;  
   align-items: center;
-}
+} */
 

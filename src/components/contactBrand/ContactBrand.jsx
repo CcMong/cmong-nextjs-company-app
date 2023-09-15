@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./contactbrand.module.css";
 import Image from 'next/image';
-import brandLogo from "../../../public/Logo.svg";
+import brandLogo from "../../../public/Img_Contact.png";
 
 const ContactBrand = () => {
   return (

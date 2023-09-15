@@ -1,10 +1,11 @@
 .main {
+  min-height: calc(100vh - 60px); 
   max-width: 1920px; /*Added to limit width*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  /* padding: 6rem; */
   /* min-height: 100vh; */
   /* min-width: 1200px; */
   /* margin-top: 100px; */
@@ -12,19 +13,95 @@
 }
 
 .heroCarousel {
-  width: 99vw;
-  min-height: calc(100vh - 100px); /*60px is height of navbar*/
-  background-color:t aqua;
+  width: 100vw;
+  /* min-height: calc(100vh - 100px); 60px is height of navbar */
+  background-color: aqua;
   position: relative;
 }
 
-.gradient {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: red;
-  z-index: 1000;
+.section2 {
+  height: 400px;
+  width: 99vw;
+  border: 1px solid magenta;
+  /* padding: 60px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
+
 }
+
+.learnContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;  
+  gap: 20px;
+}
+
+.learnTitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.learnText {
+  font-size: 12px;
+  word-spacing: 1px;
+  /* letter-spacing: 0.25px; */
+  line-height: 20px;
+}
+
+.learnBullet {
+  font-size: 12px;
+  word-spacing: 1px;
+  /* letter-spacing: 0.25px; */
+  font-weight: bold;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+.learnButton {
+  cursor: pointer;
+    background-color:steelblue;
+    color: whitesmoke;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 25px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+    transition-duration: 0.4s;
+}
+
+.imgContainer { 
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+}
+
+.learnImg {
+  width: 100%;
+  height: auto;
+}
+
+.section3 {
+  height: 340px;
+  width: 100vw;
+  border: 1px solid magenta;
+}
+
+.section4{
+  height: 400px;
+  width: 100vw;
+  border: 1px solid magenta;
+}
+
 
 
 
