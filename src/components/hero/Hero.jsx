@@ -70,11 +70,11 @@ const Hero = () => {
             //         </div>
             //     ))}
             // </div>
-            <div className={styles.experiment}>
-                <div className={`${styles.swiperButton} ${styles.swiperButtonNext}`}>
+            <div className="heroWrapper">
+                <div className="swiperButton swiperButtonNext">
                     <Image src={arrowIcon} height={10}/>
                 </div>
-                <div className={`${styles.swiperButton} ${styles.swiperButtonBack}`}>
+                <div className="swiperButton swiperButtonBack">
                     <Image src={arrowIcon} height={10}/>
                 </div>
                 <Swiper
@@ -87,9 +87,9 @@ const Hero = () => {
                     loop={true}
                     slidesPerView={1.0}
                     navigation={{
-                        nextEl: `${styles.swiperButtonNext}`,
-                        prevEl: `${styles.swiperButtonBack}`,
-                        disabledClass: `${styles.swiperButtonDisabled}`
+                        nextEl: ".swiperButtonNext",
+                        prevEl: ".swiperButtonBack",
+                        disabledClass: ".swiperButtonDisabled"
                     }}
                     className={styles.carouselContainer}
                 >

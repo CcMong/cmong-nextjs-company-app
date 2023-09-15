@@ -5,3 +5,31 @@
     margin: 0px 100px;
 }
 
+.swiperButton { /*the div behind/around the navigation pointers*/
+    display: flex;
+  position: absolute;
+  top: calc(50% + 40px);
+  z-index: 10;
+  cursor: pointer;
+  background: #00000031;
+  height: 30px;
+  width: 30px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-left: 10px;
+
+}
+
+.swiperButtonNext {
+    right: -0.1px;
+    transform: rotate(180deg);
+}
+
+.swiperButtonBack {
+    left: 0.1px;
+
+}
+
+.swiperButtonDisabled {
+
+}
