@@ -97,71 +97,32 @@ const Hero = () => {
                         disabledClass: ".swiperButtonDisabled"
                     }}
                     className={styles.carouselContainer}
-                >
-                    {/* {heroData.Details.map((detail) => (
-                        <SwiperSlide>
+                >                    
+                    {heroData.Details.map((detail, index) => (
+                        <SwiperSlide key={index}>
+                        <div className={styles.heroContent}>
+                            <div className="gradient"></div>
+                            <div className="bannerContentBox">
+                                <h1 className="bannerTitle">{detail.Title}</h1>
+                                <p className='bannerSubtitle'>{detail.Subtitle}</p>
+                                <Link href="/contact-us">
+                                    <button className='submitButton' type='button'>Contact Us</button>
+                                </Link>
+                                
+                            </div>
+                                
                             <Image 
                                 src={detail.ImageUrl}
                                 height={0}
                                 width={0}
                                 sizes='100vw'
-                                className={styles.heroImage}
-                            />
-                        </SwiperSlide>
-                    ))} */}
-
-                        <SwiperSlide>
-                            <div className={styles.heroContent}>
-                                <div className="gradient"></div>
-                                <div className="bannerContentBox">
-                                    <h1 className="bannerTitle">{heroData.Details[0].Title}</h1>
-                                    <p className='bannerSubtitle'>{heroData.Details[0].Subtitle}</p>
-                                    <Link href="/contact-us">
-                                        <button className='submitButton' type='button'>Contact Us</button>
-                                    </Link>
-                                    
-                                </div>
-                                    
-                                <Image 
-                                    src={heroData.Details[0].ImageUrl}
-                                    height={0}
-                                    width={0}
-                                    sizes='100vw'
-                                    className={styles.heroImage1}
-                                />
-                                {/* <div className={styles.gradient}></div> */}
-                            </div>
-                            
-                            {/* <div className={styles.bannerText}>
-                                <h1>{heroData.Details[0].Title}</h1>
-                            </div> */}
-                            
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <div className={styles.heroContent}>
-                            <div className="gradient"></div>
-                                <div className="bannerContentBox">
-                                    <h1 className="bannerTitle">{heroData.Details[1].Title}</h1>
-                                    <p className='bannerSubtitle'>{heroData.Details[1].Subtitle}</p>
-                                    <Link href="/contact-us">
-                                        <button className='submitButton' type='button'>Contact Us</button>
-                                    </Link>
-                                    
-                                </div>
-                                <Image 
-                                    src={heroData.Details[1].ImageUrl}
-                                    height={0}
-                                    width={0}
-                                    sizes='100vw'
-                                    className={styles.heroImage2}
-                                />
-                                {/* <div className={styles.gradient}></div> */}
-                            </div>
-                        </SwiperSlide>                     
+                                className={index === 0 ? styles.heroImage1 : index === 1 ? styles.heroImage2 : styles.heroImage3}
+                            />                                
+                        </div>                         
+                    </SwiperSlide>                        
+                    ))}                        
                     
-                </Swiper>
-                
+                </Swiper>                
             </div>
             
         )}       

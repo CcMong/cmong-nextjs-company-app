@@ -53,6 +53,12 @@
     margin: -25px 0px; /*-15px*/
 }
 
+.heroImage3 {
+    min-width: 100%;
+    height: auto;
+    transform: translateY(10%);
+}
+
 /* .gradient {
     z-index: 1;
     background-color: blueviolet;
