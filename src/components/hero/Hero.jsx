@@ -79,6 +79,7 @@ const Hero = () => {
                     modules={[Pagination, Navigation, Autoplay, EffectFade]}
                     loop={true}
                     effect='fade'
+                    speed={1200}
                     slidesPerView={1.0}
                     navigation={{
                         nextEl: ".swiperButtonNext",
