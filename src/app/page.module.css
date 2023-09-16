@@ -1,5 +1,5 @@
 .main {
-  min-height: calc(100vh - 60px); 
+  min-height: calc(100vh - 100px); 
   max-width: 1920px; /*Added to limit width*/
   display: flex;
   flex-direction: column;
@@ -14,20 +14,28 @@
 
 .heroCarousel {
   width: 100vw;
-  /* min-height: calc(100vh - 100px); 60px is height of navbar */
+  min-height: calc(100vh - 100px); /*Keeps the area intact during loading*/
+  /*60px is height of navbar*/
   background-color: aqua;
+  border: 2px solid greenyellow;
   position: relative;
+  background-image: url(../../public/Logo.svg);
+  /* background-size: cover; */
+  background-repeat: repeat;
 }
+
+/* .modalImage { */
+  /* position: absolute; */
+  /* height: 100%; */
+/* } */
 
 .section2 {
   height: 400px;
   width: 99vw;
   border: 1px solid magenta;
-  /* padding: 60px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
   padding-left: 100px;
   padding-right: 100px;
 
@@ -79,6 +87,11 @@
     transition-duration: 0.4s;
 }
 
+.learnButton:hover {
+  scale: 105%;
+  background-color: rgb(56, 105, 145);
+}
+
 .imgContainer { 
   margin-top: 80px;
   margin-bottom: 80px;
@@ -91,9 +104,79 @@
 }
 
 .section3 {
-  height: 340px;
+  height: 380px;
   width: 100vw;
   border: 1px solid magenta;
+  /* background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
+  background-size: cover; */
+  
+}
+
+.panImgWrapper {
+  max-width: 100vw;
+  height: 380px;
+  border: 1px solid lime;
+  position: relative;
+  background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
+  background-size: cover;
+  padding-left: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+/* .panoramicImg {
+  max-width: 100vw;
+  height: 380px;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  /* top: 0; */
+  /* transform: scale(1); */
+/* } */ 
+
+.loginContent {
+  position: absolute;
+  height: 75%;
+  width: 40%;
+  z-index: 9 !important;
+  background-color: rgb(115, 106, 106);
+  color: rgba(255, 255, 255, 0.756);
+  border-radius: 3px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.loginTitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.loginText {
+  font-size: 11px;
+  /* word-spacing: 1px; */
+  line-height: 20px;
+}
+
+.loginButton {
+  cursor: pointer;
+  color:steelblue;
+  background-color:rgb(227, 233, 244);
+    border: none;
+    border-radius: 3px;
+    padding: 12px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+    transition-duration: 0.4s;
+
 }
 
 .section4{

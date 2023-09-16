@@ -4,13 +4,14 @@ import Image from 'next/image';
 import React, { useEffect, useState, useRef } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import SwiperCore, { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
 
 import styles from './hero.module.css';
 import testimage from "../../../public/carousel_1.jpg"
@@ -57,30 +58,17 @@ const Hero = () => {
         {isLoading ? (
             <p>Loading...</p>
         ) : (
-            // <div>
-            //     {heroData.Details.map((detail, index) => (
-            //         <div key={index}>
-            //             <h1>{detail.Title}</h1>
-            //             <h3>{detail.Subtitle}</h3>
-            //             <Image 
-            //                 src={detail.ImageUrl}
-            //                 height={100}
-            //                 width={100}
-            //                 alt="slider"
-            //             />
-            //         </div>
-            //     ))}
-            // </div>
+            
             <div className="heroWrapper">
                 {/* Left Side Gradient Effect, with Text */}
                 {/* <div className="gradient"></div> */}
                 {/* Swiper Navigation Buttons  */}
-                <div className="swiperButton swiperButtonNext">
+                {/* <div className="swiperButton swiperButtonNext">
                     <Image src={arrowIcon} height={10}/>
                 </div>
                 <div className="swiperButton swiperButtonBack">
                     <Image src={arrowIcon} height={10}/>
-                </div>
+                </div> */}
                 {/* Code for Swiper carousel */}
                 <Swiper
                     pagination={{
@@ -88,8 +76,9 @@ const Hero = () => {
                     clickable: true
                     }}
                     autoplay={{delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-                    modules={[Pagination, Navigation, Autoplay]}
+                    modules={[Pagination, Navigation, Autoplay, EffectFade]}
                     loop={true}
+                    effect='fade'
                     slidesPerView={1.0}
                     navigation={{
                         nextEl: ".swiperButtonNext",
@@ -98,6 +87,12 @@ const Hero = () => {
                     }}
                     className={styles.carouselContainer}
                 >                    
+                    <div className="swiperButton swiperButtonNext">
+                        <Image src={arrowIcon} height={10}/>
+                    </div>
+                    <div className="swiperButton swiperButtonBack">
+                        <Image src={arrowIcon} height={10}/>
+                    </div>
                     {heroData.Details.map((detail, index) => (
                         <SwiperSlide key={index}>
                         <div className={styles.heroContent}>
