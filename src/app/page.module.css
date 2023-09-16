@@ -101,15 +101,13 @@
 .learnImg {
   width: 100%;
   height: auto;
+  border-radius: 3px;
 }
 
 .section3 {
   height: 380px;
   width: 100vw;
-  border: 1px solid magenta;
-  /* background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
-  background-size: cover; */
-  
+  border: 1px solid magenta; 
 }
 
 .panImgWrapper {
@@ -181,7 +179,6 @@
 .loginButton:hover {
   scale: 105%;
   background-color:rgb(165, 189, 234);
-
 }
 
 .section4{

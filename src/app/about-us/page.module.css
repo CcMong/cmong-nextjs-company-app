@@ -1,35 +1,62 @@
 .container {
-    max-width: 500px;
-    padding-top: 60px; /*accounting for the nav bar*/
+    max-width: 1920px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     min-height: calc(100vh - 60px);
-    margin: 0px 100px;
+    color: inherit;
 }
 
-.swiperButton { /*the div behind/around the navigation pointers*/
+.aboutContent {
+    width: 100vw;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.aboutHeading {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.aboutText {
+    line-height: 20px;
+    font-size: 11px;
+}
+
+.foreText {
+    font-weight: 700;
+}
+
+.bodyText {
+    margin-bottom: 20px;
+}
+
+.blueText {
+    text-decoration: underline;
+    color: royalblue;
+}
+
+.imageContainer {
     display: flex;
-  position: absolute;
-  top: calc(50% + 40px);
-  z-index: 10;
-  cursor: pointer;
-  background: #00000031;
-  height: 30px;
-  width: 30px;
-  border-radius: 2px;
-  padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.centralImage {
+    border-radius: 3px;
+}
+
+.bulletHeading {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.bulletText {
+    font-size: 12px;
+  word-spacing: 1px;
+  font-weight: bold;
+  line-height: 25px;
   padding-left: 10px;
-
-}
-
-.swiperButtonNext {
-    right: -0.1px;
-    transform: rotate(180deg);
-}
-
-.swiperButtonBack {
-    left: 0.1px;
-
-}
-
-.swiperButtonDisabled {
-
+  margin: 20px 0px;
 }
