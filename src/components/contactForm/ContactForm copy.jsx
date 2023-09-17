@@ -29,14 +29,72 @@ const ContactForm = () => {
    
     const [formInputs, setFormInputs] = useState(initialFormInputs);
 
-
     // Managing state for form submission and errors
 
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState({});
 
+    // Functions to validate form inputs
+
+    const isValidEmail = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    const isValidPhoneNumber = (phoneNumber) => {
+        return phoneNumber.trim().length <= 20 && phoneNumber.trim() !== '';
+    };
+
+    const isValidUKPostcode = (postcode) => {        
+        return /^[A-Z]{1,2}\d{1,2}[A-Z]?\s?\d[A-Z]{2}$/.test(postcode);
+    };
     
+    // Form Validation
+
+    const validateForm = () => {
+        // Set aside an empty object to accept any validation errors
+
+        const validationErrors = {};
+
+        if(!formInputs.FullName.trim()) { // trim() used in case the user incorporates whitespace at either end of the entry
+            validationErrors.FullName = "Required";
+        }
+
+        if(!formInputs.EmailAddress.trim() || !isValidEmail(formInputs.EmailAddress)){
+            validationErrors.EmailAddress = "Invalid_Email_Address";
+        }
+
+        if(formInputs.PhoneNumbers.some(phoneNumber => !isValidPhoneNumber(phoneNumber))) {
+            validationErrors.PhoneNumbers = "Invalid_Phone_Number";            
+        }
+
+        if(formInputs.Message.length > 500) {
+            validationErrors.Message = "Max_Length_Exceeded";            
+        }
+
+        if(checked && !formInputs.AddressDetails.AddressLine1.trim()) {
+            validationErrors.AddressLine1 = "Required";
+        }
+
+        if(checked && !formInputs.AddressDetails.CityTown.trim()) {
+            validationErrors.CityTown = "Required";
+        }
+
+        if(checked && !formInputs.AddressDetails.StateCounty.trim()) {
+            validationErrors.StateCounty = "Required";
+        }
+
+        if(checked && formInputs.AddressDetails.Postcode.trim() && !isValidUKPostcode(formInputs.AddressDetails.Postcode)) {
+            validationErrors.Postcode = "Invalid_Postcode";
+        }
+
+        if(checked && !formInputs.AddressDetails.Country.trim()) {
+            validationErrors.Country = "Required";
+        }
+
+        return validationErrors;
+    }
+
     /*Function for handling changes in the form inputs */
 
     const handleChange = (e, index) => {
@@ -57,65 +115,67 @@ const ContactForm = () => {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
-        const data = formInputs;
+        // Start by validating the form
 
-        console.log(data);
+        const validationErrors = validateForm();
 
-        // // Start by validating the form
+        // If there are any errors, then set the validation errors and stop the form from submitting the input data
 
-        // const validationErrors = validateForm();
+        if(Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
+        }
 
-        // // If there are any errors, then set the validation errors and stop the form from submitting the input data
+        // If form inputs are valid, then clear any pending errors, and continue with submission
 
-        // if(Object.keys(validationErrors).length > 0) {
-        //     setErrors(validationErrors);
-        //     return;
-        // }
-
-        // // If form inputs are valid, then clear any pending errors, and continue with submission
-
-        // setErrors({});
+        setErrors({});
 
         
-        // // While the form is being submitted, we want to show a loading state
+        // While the form is being submitted, we want to show a loading state
 
         setSubmitting(true);
 
         try{ // Make a POST request to an external REST endpoint on form submission
             const response = await fetch("https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit", {
-                method: "POST",
+                method: POST,
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(formInputs),
             });
 
-            if(!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.Status}`)
-            }
+            if(response.ok) {
+                // If the form is successfully submitted
+                setSubmitted(true);
+                setFormInputs(initialFormInputs); // Clears the form fields
+            } else {
+                // If submission is unsuccessful, we need to now handle the API error
+                const responseData = await response.json();
 
-            // if everything is okay with the request:
+                if(responseData.Errors && responseData.Errors.length > 0) {
+                    const apiError = {};
+                    responseData.Errors.forEach((error) => {
+                        const fieldName = error.FieldName.replace("AddressDetails.", "");
+                        apiError[fieldName] = error.MessageCode;
+                    });
+                    setErrors(apiError);
+                } else {
+                    setErrors("An error has occurred"); // ?? setError
+                }                
+            };
 
-            const responseData = await response.json();
-            console.log(responseData);
-
-            setSubmitted(true);
-            setFormInputs(initialFormInputs); // Clears the form fields
-            
         } catch(error) {
-            // If there are any other errors, 
-            console.log(`A problem was encountered during fetch - ${error.message}`);
-
+            // If there are any other errors, eg. network
+            setErrors("An error has occurred");    //?? setError        
         } finally {
             setSubmitting(false);
-        };        
+        };
+        
+        console.log("Submitted form inputs:", formInputs)
+        console.log(validationErrors)
     };
     
     return (
-
-      submitted ? <><p>Successful submission</p></> :
-
-      
         
         <form 
             className={styles.container}

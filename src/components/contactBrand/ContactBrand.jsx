@@ -7,13 +7,12 @@ const ContactBrand = () => {
   return (
     <div className={styles.container}>
         <Image 
-            src={brandLogo}
-            width={0}
-            height={0}
-            sizes='100vw'
-            className={styles.brandImg}
-        
-        
+          src={brandLogo}
+          width={0}
+          height={0}
+          sizes='100vw'
+          className={styles.brandImg}
+          alt="company logo"          
         />
     </div>
   )
