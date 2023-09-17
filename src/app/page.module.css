@@ -5,10 +5,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* padding: 6rem; */
-  /* min-height: 100vh; */
-  /* min-width: 1200px; */
-  /* margin-top: 100px; */
   padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
 }
 
@@ -16,12 +12,43 @@
   width: 100vw;
   min-height: calc(100vh - 100px); /*Keeps the area intact during loading*/
   /*60px is height of navbar*/
-  background-color: aqua;
+  background-color: rgba(128, 128, 128, 0.258);
   border: 2px solid greenyellow;
   position: relative;
-  background-image: url(../../public/Logo.svg);
+  /* background-image: url(../../public/company-logo.png); */
   /* background-size: cover; */
-  background-repeat: repeat;
+  /* background-repeat: repeat; */
+}
+
+.loadingModal {
+  position: absolute;
+  /* transform: translateX(500%); */
+  /* transform: translateY(200%); */
+  /* margin: 200px; */
+  
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, black, darkgray);
+}
+
+.modalImg {
+  -webkit-animation: rotation 3s infinite linear;
+  -moz-animation: rotation 3s infinite linear;
+  animation: rotation 3s infinite linear;
+
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /* .modalImage { */

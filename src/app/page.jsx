@@ -4,17 +4,17 @@ import Hero from '@/components/hero/Hero';
 import section2img from "../../public/learn_more_section.jpg";
 import Link from 'next/link';
 import section3img from "../../public/login_section.jpg";
-import modalImage from "../../public/Logo.svg";
+import modalImage from "../../public/company-logo.png";
 
 export default function Home() {
   
   return (
     <main className={styles.main}>
       <section className={styles.heroCarousel}>
-        {/* <div className={styles.loadingModal}>
-          <h1>Loading Modal</h1>
-          <Image src={modalImage} height={100}/>
-        </div> */}
+        <div className={styles.loadingModal}>
+          {/* <h1>Loading Modal</h1> */}
+          <Image src={modalImage} height={200} className={styles.modalImg}/>
+        </div>
         <Hero />       
       </section>
 

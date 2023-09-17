@@ -34,7 +34,7 @@ const ContactForm = () => {
     // Managing state for form submission and errors
 
     const [submitting, setSubmitting] = useState(false);
-    const [submitted, setSubmitted] = useState(true);
+    const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState({});
 
     

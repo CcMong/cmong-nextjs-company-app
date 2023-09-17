@@ -17,8 +17,7 @@ const Submitted = () => {
         </div> 
         <h2 className={styles.mainMessage}>Your message has been sent.</h2>
         <p className={styles.subText}>We will be in contact with you within 24 hours</p>
-      </div>
-        
+      </div>        
     </div>
   )
 }
