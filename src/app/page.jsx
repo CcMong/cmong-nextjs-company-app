@@ -12,8 +12,7 @@ export default function Home() {
     <main className={styles.main}>
       <section className={styles.heroCarousel}>
         <div className={styles.loadingModal}>
-          {/* <h1>Loading Modal</h1> */}
-          <Image src={modalImage} height={200} className={styles.modalImg}/>
+          <Image src={modalImage} height={200} className={styles.modalImg} alt="spinning company logo"/>
         </div>
         <Hero />       
       </section>
@@ -39,20 +38,14 @@ export default function Home() {
             height={0}
             width={0}
             className={styles.learnImg}
-          
+            alt="Office at Company "          
           />
         </div>        
       </section>
 
       <section className={styles.section3}>
         <div className={styles.panImgWrapper}>
-          {/* <Image 
-            src={section3img}
-            height={0}
-            width={0}
-            sizes='100vw'
-            className={styles.panoramicImg}          
-          /> */}
+          
           <div className={styles.loginContent}>
             <h2 className={styles.loginTitle}>Nulla sem urna, dictum sed nisi in, viverra rutrum neque</h2>
             <p className={styles.loginText}>Cras sit amet dapibus magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec finibus nulla quis lorem mollis lacinia. Fusce ut arcu ligula. Pellentesque augue ex, pellentesque ut maximus non, eleifend ut lorem. Vestibulum rutrum malesuada turpis, molestie mattis velit maximus ac. Quisque laculis hendrerit ex et tincidunt. Aenean eu magna ut nisi placerat fringilla in sed diam.</p>

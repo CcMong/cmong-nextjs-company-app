@@ -23,7 +23,8 @@ const About = () => {
           <Image 
           src={centralImage}
           height={400}
-          className={styles.centralImage}                  
+          className={styles.centralImage} 
+          alt="Company's open plan office."                 
         />
         </div>
         <section className={styles.aboutText}>

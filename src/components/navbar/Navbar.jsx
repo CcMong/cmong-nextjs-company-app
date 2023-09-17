@@ -5,24 +5,7 @@ import styles from "./navbar.module.css";
 import logo from "../../../public/Logo.svg";
 import Image from 'next/image';
 import Link from 'next/link';
-
-const navlinks = [
-    {
-        id: 1,
-        title: "HOME",
-        url: "/",
-    },
-    {
-        id: 2,
-        title: "ABOUT US",
-        url: "/about-us",
-    },
-    {
-        id: 3,
-        title: "CONTACT US",
-        url: "/contact-us",
-    },    
-];
+import { navlinks } from '@/app/data/data';
 
 const Navbar = () => {
     return (
@@ -39,6 +22,7 @@ const Navbar = () => {
                   <Link 
                       key={navlink.id}
                       href={navlink.url}
+                      className={styles.link}
                   >
                       {navlink.title}
                   </Link>

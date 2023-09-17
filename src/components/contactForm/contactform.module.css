@@ -137,6 +137,12 @@
     gap: 20px;
     margin: 20px 0;
     position: relative;
+    transition-duration: 0.4s;
+}
+
+.submit:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
 }
 
 .sendIcon {

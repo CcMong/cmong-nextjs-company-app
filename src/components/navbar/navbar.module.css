@@ -24,6 +24,12 @@
     font-weight: 500;
 }
 
+.link:hover {
+    border-bottom: 2px solid slategray;
+    scale: 105%;
+    transition-duration: 0.4s;
+}
+
 .login {
     padding: 12px 35px;
     font-size: 12px;

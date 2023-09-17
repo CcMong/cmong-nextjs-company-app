@@ -59,16 +59,8 @@ const Hero = () => {
             <p>Loading...</p>
         ) : (
             
-            <div className="heroWrapper">
-                {/* Left Side Gradient Effect, with Text */}
-                {/* <div className="gradient"></div> */}
-                {/* Swiper Navigation Buttons  */}
-                {/* <div className="swiperButton swiperButtonNext">
-                    <Image src={arrowIcon} height={10}/>
-                </div>
-                <div className="swiperButton swiperButtonBack">
-                    <Image src={arrowIcon} height={10}/>
-                </div> */}
+            <div className="heroWrapper">                
+                
                 {/* Code for Swiper carousel */}
                 <Swiper
                     pagination={{
@@ -92,7 +84,7 @@ const Hero = () => {
                         <Image src={arrowIcon} height={10}/>
                     </div>
                     <div className="swiperButton swiperButtonBack">
-                        <Image src={arrowIcon} height={10}/>
+                        <Image src={arrowIcon} height={10} alt="left-pointing arrow icon"/>
                     </div>
                     {heroData.Details.map((detail, index) => (
                         <SwiperSlide key={index}>
@@ -112,6 +104,7 @@ const Hero = () => {
                                 height={0}
                                 width={0}
                                 sizes='100vw'
+                                alt="Hero banner image"
                                 className={index === 0 ? styles.heroImage1 : index === 1 ? styles.heroImage2 : styles.heroImage3}
                             />                                
                         </div>                         

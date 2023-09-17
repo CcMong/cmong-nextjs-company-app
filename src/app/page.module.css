@@ -11,21 +11,12 @@
 .heroCarousel {
   width: 100vw;
   min-height: calc(100vh - 100px); /*Keeps the area intact during loading*/
-  /*60px is height of navbar*/
   background-color: rgba(128, 128, 128, 0.258);
-  border: 2px solid greenyellow;
   position: relative;
-  /* background-image: url(../../public/company-logo.png); */
-  /* background-size: cover; */
-  /* background-repeat: repeat; */
 }
 
 .loadingModal {
-  position: absolute;
-  /* transform: translateX(500%); */
-  /* transform: translateY(200%); */
-  /* margin: 200px; */
-  
+  position: absolute;  
   height: 100%;
   width: 100vw;
   display: flex;
@@ -38,8 +29,6 @@
   -webkit-animation: rotation 3s infinite linear;
   -moz-animation: rotation 3s infinite linear;
   animation: rotation 3s infinite linear;
-
-
 }
 
 @keyframes rotation {
@@ -51,21 +40,14 @@
   }
 }
 
-/* .modalImage { */
-  /* position: absolute; */
-  /* height: 100%; */
-/* } */
-
 .section2 {
   height: 400px;
   width: 99vw;
-  border: 1px solid magenta;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 100px;
   padding-right: 100px;
-
 }
 
 .learnContent {
@@ -92,7 +74,6 @@
 .learnBullet {
   font-size: 12px;
   word-spacing: 1px;
-  /* letter-spacing: 0.25px; */
   font-weight: bold;
   line-height: 25px;
   padding-left: 10px;
@@ -133,14 +114,12 @@
 
 .section3 {
   height: 380px;
-  width: 100vw;
-  border: 1px solid magenta; 
+  width: 100vw; 
 }
 
 .panImgWrapper {
   max-width: 100vw;
   height: 380px;
-  border: 1px solid lime;
   position: relative;
   background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
   background-size: cover;
@@ -148,18 +127,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
 }
-
-/* .panoramicImg {
-  max-width: 100vw;
-  height: 380px;
-  object-fit: cover;
-  object-position: top;
-  position: absolute;
-  /* top: 0; */
-  /* transform: scale(1); */
-/* } */ 
 
 .loginContent {
   position: absolute;
@@ -183,7 +151,6 @@
 
 .loginText {
   font-size: 11px;
-  /* word-spacing: 1px; */
   line-height: 20px;
 }
 
@@ -211,7 +178,6 @@
 .section4{
   height: 500px;
   width: 100vw;
-  border: 1px solid magenta;
   padding-left: 100px;
   padding-right: 100px;
   display: flex;
@@ -224,14 +190,11 @@
 .sec4Title {
   font-size: 20px;
   font-weight: 400;
-  /* line-height: 30px; */
 }
 
 .sec4Subtitle {
   font-weight: 600;
   font-size: 15px;
-  /* line-height: 20px; */
-
 }
 
 .multicol {
