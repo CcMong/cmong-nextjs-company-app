@@ -1,0 +1,44 @@
+.container {
+
+}
+
+.greenBg {
+    height: 150px;
+    max-width: 95%;
+    background-color: rgba(207, 245, 182, 0.475);
+    padding-left: 20px;
+    border-radius: 3px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.circularBg {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(125, 189, 47, 0.696);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.tickImg {
+    position: absolute;
+}
+
+.mainMessage {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 3px;
+}
+
+.subText {
+    font-size: 12px;
+    word-spacing: 1px;
+    line-height: 20px;
+}

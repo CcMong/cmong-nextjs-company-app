@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styles from "./contactform.module.css";
 import submitIcon from "../../../public/Icon_Submit.svg";
 import Image from 'next/image';
+import Submitted from '../submitted/Submitted';
 
 
 const ContactForm = () => {
@@ -33,7 +34,7 @@ const ContactForm = () => {
     // Managing state for form submission and errors
 
     const [submitting, setSubmitting] = useState(false);
-    const [submitted, setSubmitted] = useState(false);
+    const [submitted, setSubmitted] = useState(true);
     const [errors, setErrors] = useState({});
 
     
@@ -60,23 +61,7 @@ const ContactForm = () => {
         const data = formInputs;
 
         console.log(data);
-
-        // // Start by validating the form
-
-        // const validationErrors = validateForm();
-
-        // // If there are any errors, then set the validation errors and stop the form from submitting the input data
-
-        // if(Object.keys(validationErrors).length > 0) {
-        //     setErrors(validationErrors);
-        //     return;
-        // }
-
-        // // If form inputs are valid, then clear any pending errors, and continue with submission
-
-        // setErrors({});
-
-        
+               
         // // While the form is being submitted, we want to show a loading state
 
         setSubmitting(true);
@@ -113,9 +98,11 @@ const ContactForm = () => {
     
     return (
 
-      submitted ? <><p>Successful submission</p></> :
-
+      submitted ? <div><Submitted /></div> 
       
+      :
+
+
         
         <form 
             className={styles.container}
