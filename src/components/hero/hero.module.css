@@ -65,3 +65,84 @@
 
 }
 
+@media (max-width: 700px) {
+    .container {
+
+    }
+    
+    .heroWrapper {
+        position: relative;
+    }
+    
+    .carouselContainer { 
+        /* slider with pagination border */
+        /* Entire carousel window*/
+        height: 70vh; 
+        position: relative;
+        width: 100vw;
+    }
+    
+    .heroContent {
+        position: relative;
+        height: 70vh;
+    }
+    
+    .heroImage1 {
+        /* min-width: 100%;
+        height: auto; */
+        height: 100%;
+        width: auto;
+        transform: scale(1);
+        transform: translateX(-20%);
+    }
+    
+    
+    .heroImage2 {
+        /* min-width: 100%; 
+        height: auto; */
+        height: 100%;
+        width: auto;
+        transform: scale(1);
+        transform: translateX(-30%); /*-12%*/
+        /* margin: -1.563rem 0px; -0.938rem */
+    }
+    
+    .heroImage3 {
+        min-width: 100%;
+        height: auto;
+        /* transform: translateY(10%); */
+        transform: scale(1.1);
+    }
+    
+    /*Navigation Buttons on the Hero Carousel*/
+    
+    .swiperButton { /*the div behind/around the navigation pointers*/
+        display: flex;
+        position: absolute;
+        top: calc(50% + 2.5rem);
+        z-index: 10;
+        cursor: pointer;
+        background: #00000031;
+        height: 1.875rem;
+        width: 1.875rem;
+        border-radius: 0.125rem;
+        padding-top: 0.625rem;
+        padding-left: 0.625rem;
+    
+    }
+    
+    .swiperButtonNext {
+        right: -0.1px;
+        transform: rotate(180deg);
+    }
+    
+    .swiperButtonBack {
+        left: 0.1px;
+    
+    }
+
+    .heroLink {
+        width: 100%;
+    }
+}
+

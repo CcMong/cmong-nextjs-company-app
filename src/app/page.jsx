@@ -30,7 +30,7 @@ export default function Home() {
               <li key={index}>{bullet}</li>
             ))}            
           </ul>
-          <Link href="/about-us">
+          <Link href="/about-us" className={styles.learnLink}>
             <button type='button' className={styles.learnButton}>Learn More</button>
           </Link>
 
@@ -56,7 +56,7 @@ export default function Home() {
             <p className={styles.loginText}>
               {homePageContent.section3.body}
             </p>
-            <Link href="/login">
+            <Link href="/login" className={styles.learnLink}>
               <button type="button" className={styles.loginButton}>Log in</button>
             </Link>
             
@@ -83,7 +83,7 @@ export default function Home() {
           ))}
         </div>
 
-        <Link href="/contact-us">
+        <Link href="/contact-us" className={styles.learnLink}>
           <button className={styles.sec4Button}>Contact us</button>        
         </Link>       
         

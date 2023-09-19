@@ -84,14 +84,15 @@ a {
   color: white;
   z-index: 100 !important;
   height: 50%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;  
   align-items: start;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   margin-left: 10%;
   padding-right: 6.25rem;
+  /* top: 20%; */
 }
 
 .bannerTitle {
@@ -132,13 +133,236 @@ a {
 .submitButton:hover {
   scale: 105%;
   background-color: rgb(56, 105, 145);
+} 
+
+@media (max-width: 700px) {
+
+  .container {
+    max-width: 1920px; /*1366 x 768 or 1920 x 1080?*/
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+  
+  .pageHeading {
+    font-weight: lighter;
+    font-size: 1.375rem;
+  }
+  
+  /*NAVIGATION BUTTONS FOR THE HERO COMPONENT*/
+  
+  .heroWrapper {
+    position: relative;
+  }
+  
+  .swiperButton { /*the div behind/around the navigation pointers*/
+    display: flex;
+    position: absolute;
+    top: calc(50% + 0.625rem);
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.502);
+    height: 1.875rem;
+    width: 2.5rem;
+    border-radius: 0.125rem;
+    padding-top: 0.625rem;
+    padding-left: 0.938rem;
+  
+  }
+  
+  .swiperButtonNext {
+    right: -0.1px;
+    transform: rotate(180deg);
+  }
+  
+  .swiperButtonBack {
+    left: 0.1px;
+  
+  }
+  
+  /*HERO IMAGE BACKGROUND GRADIENT*/
+  
+  .gradient {
+    display: flex;
+    position: absolute;
+    z-index: 8;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right, rgb(0, 0, 0), rgba(255, 255, 255, 0)
+    );
+  }
+  
+  .bannerContentBox {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    z-index: 100 !important;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    margin-top: 5%;
+    /* margin-left: 10%; */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    /* transform: translateY(-40%); */
+    border: 1px solid magenta;
+  }
+  
+  .bannerTitle {
+    /* margin: 0.625rem 0px; */
+    font-size: 1.875rem;
+    font-weight: 400;
+  }
+  
+  .bannerSubtitle {
+    /* margin: 0.625rem 0px; */
+    font-size: 0.938rem;
+    padding-right: 3.125rem;
+    line-height: 1.875rem;
+  }
+  
+  .bannerSubmit {
+    margin: 0.625rem 0rem;
+  
+  }
+  
+  .submitButton {
+      cursor: pointer;
+      background-color:steelblue;
+      color: whitesmoke;
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 1.563rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 1.25rem 0;
+      transition-duration: 0.4s;
+      display: block;
+      width: 100%;
+    
+  }
+  
+  .submitButton:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
+  } 
 }
 
 @media (min-width: 701px) and (max-width: 111.25rem) {
-
-
-}
-
-@media (max-width: 700px) {
+  .container {
+    max-width: 1920px; /*1366 x 768 or 1920 x 1080?*/
+    min-height: 100vh;
+    margin: 0 auto;
+  }
   
+  .pageHeading {
+    font-weight: lighter;
+    font-size: 1.375rem;
+  }
+  
+  /*NAVIGATION BUTTONS FOR THE HERO COMPONENT*/
+  
+  .heroWrapper {
+    position: relative;
+  }
+  
+  .swiperButton { /*the div behind/around the navigation pointers*/
+    display: flex;
+    position: absolute;
+    top: calc(50% + 0.625rem);
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.502);
+    height: 1.875rem;
+    width: 2.5rem;
+    border-radius: 0.125rem;
+    padding-top: 0.625rem;
+    padding-left: 0.938rem;  
+  }
+  
+  .swiperButtonNext {
+    right: -0.1px;
+    transform: rotate(180deg);
+  }
+  
+  .swiperButtonBack {
+    left: 0.1px;  
+  }
+  
+  /*HERO IMAGE BACKGROUND GRADIENT*/
+  
+  .gradient {
+    display: flex;
+    position: absolute;
+    z-index: 8;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right, rgb(0, 0, 0), rgba(255, 255, 255, 0)
+    );
+  }
+  
+  .bannerContentBox {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    z-index: 100 !important;
+    height: 50%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: start;
+    margin-top: 5%;
+    margin-left: 10%;
+    padding-right: 6.25rem;
+  }
+  
+  .bannerTitle {
+    margin: 0.625rem 0px;
+    font-size: 1.875rem;
+    font-weight: 400;
+  }
+  
+  .bannerSubtitle {
+    margin: 0.625rem 0px;
+    font-size: 0.938;
+    padding-right: 3.125rem;
+    line-height: 1.875rem;
+  }
+  
+  .bannerSubmit {
+    margin: 0.625rem 0rem;
+  
+  }
+  
+  .submitButton {
+      cursor: pointer;
+      background-color:steelblue;
+      color: whitesmoke;
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 1.563rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 1.25rem 0;
+      transition-duration: 0.4s;    
+  }
+  
+  .submitButton:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
+  }
+
+
 }

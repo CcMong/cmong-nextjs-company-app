@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useEffect, useState, useRef } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -88,7 +88,7 @@ const Hero = () => {
                             <div className="bannerContentBox">
                                 <h1 className="bannerTitle">{detail.Title}</h1>
                                 <p className='bannerSubtitle'>{detail.Subtitle}</p>
-                                <Link href="/contact-us">
+                                <Link href="/contact-us" className={styles.heroLink}>
                                     <button className='submitButton' type='button'>Contact Us</button>
                                 </Link>
                                 

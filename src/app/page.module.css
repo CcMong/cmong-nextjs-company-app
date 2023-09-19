@@ -10,7 +10,8 @@
 
 .heroCarousel {
   width: 100vw;
-  min-height: calc(100vh - 6.25rem); /*Keeps the area intact during loading*/
+  /* min-height: calc(100vh - 6.25rem); Keeps the area intact during loading */
+  min-height: 70vh;
   background-color: rgba(128, 128, 128, 0.258);
   position: relative;
 }
@@ -247,9 +248,10 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  
   .main {
-    min-height: calc(100vh - 6.25rem); 
-    max-width: 1920px; /*Added to limit width*/
+    /* min-height: calc(100vh - 6.25rem); 
+    max-width: 1920px; Added to limit width */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -259,12 +261,13 @@
   
   .heroCarousel {
     width: 100vw;
-    min-height: calc(100vh - 6.25rem); /*Keeps the area intact during loading*/
+    min-height: 70vh; /*Loading screen, grey part. Keeps the area intact during loading.*/
     background-color: rgba(128, 128, 128, 0.258);
     position: relative;
   }
   
   .loadingModal {
+    /* The actual screen with spinning logo */
     position: absolute;  
     height: 100%;
     width: 100vw;
@@ -290,13 +293,14 @@
   }
   
   .section2 {
-    min-height: 25rem;
+    height: auto;
     width: 99vw;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
@@ -306,7 +310,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 50%;  
+    width: 100%;  
     gap: 1.25rem;
   }
   
@@ -339,16 +343,22 @@
       padding: 0.75rem 1.563rem;
       font-size: 0.75rem;
       font-weight: 700;
-      display: flex;
-      justify-content: center;
+      /* display: flex;
+      justify-content: center; */
       gap: 1.25rem;
       margin: 0.625rem 0;
       transition-duration: 0.4s;
+      width: 100%;
+      display: block;
   }
   
   .learnButton:hover {
     scale: 105%;
     background-color: rgb(56, 105, 145);
+  }
+
+  .learnLink {
+    width: 100%;
   }
   
   .imgContainer { 
@@ -356,14 +366,16 @@
     margin-bottom: 80px; */
     /* margin-left: 6.25rem; */
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     /* height: 80%; */
-    width: 50%;
+    width: 100%;
+    order: -1; /*Makes the image preferentially appear first at smaller viewport dimensions*/
+    margin-bottom: 5%;
   
   }
   
   .learnImg {
-    width: 80%;
+    width: 100%;
     height: auto;
     border-radius: 0.188rem;
   }
@@ -379,7 +391,7 @@
     position: relative;
     background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
     background-size: cover;
-    padding-left: 10%;
+    /* padding-left: 10%; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -387,10 +399,12 @@
   
   .loginContent {
     position: absolute;
-    height: 75%;
-    width: 40%;
+    height: 90%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 9 !important;
-    background-color: rgb(115, 106, 106);
+    background-color: rgba(70, 65, 65, 0.728);
     color: rgba(255, 255, 255, 0.756);
     border-radius: 0.188rem;
     padding: 1.563rem;
@@ -424,6 +438,7 @@
       gap: 1.25rem;
       margin: 0.625rem 0;
       transition-duration: 0.4s;
+      width: 100%;
   }
   
   .loginButton:hover {
@@ -432,10 +447,10 @@
   }
   
   .section4{
-    height: 31.25rem;
+    height: auto;
     width: 100vw;
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -446,17 +461,18 @@
   .sec4Title {
     font-size: 1.25rem;
     font-weight: 400;
+    text-align: center;
   }
   
   .sec4Subtitle {
     font-weight: 600;
     font-size: 0.938rem;
+    text-align: center;
   }
   
   .multicol {
-    column-count: 3;
+    column-count: 1;
     margin-top: 0.938rem;
-    column-gap: 1.563rem;
   }
   
   .sec4Foretext, .sec4Text {
@@ -481,8 +497,11 @@
       display: flex;
       justify-content: center;
       gap: 1.25rem;
-      margin: 0.625rem 0;
+      margin-top: 0.625rem;
+      margin-bottom: 2.5rem;
       transition-duration: 0.4s;
+      display: block;
+      width: 100%;
   }
   
   .sec4Button:hover {

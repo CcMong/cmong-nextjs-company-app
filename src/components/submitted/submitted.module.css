@@ -1,4 +1,5 @@
 .container {
+    min-height: calc(50vh);
 
 }
 
@@ -7,6 +8,7 @@
     max-width: 95%;
     background-color: rgba(207, 245, 182, 0.475);
     padding-left: 1.25rem;
+    padding-right: 1.25rem;
     border-radius: 0.188rem;
     margin-top: 0.625rem;
     display: flex;
