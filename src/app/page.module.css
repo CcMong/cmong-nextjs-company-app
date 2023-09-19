@@ -115,9 +115,9 @@
 }
 
 .learnImg {
-  width: 80%;
-  height: auto;
-  border-radius: 0.188rem;
+    width: 95%;
+    height: auto;
+    border-radius: 0.188rem;
 }
 
 .section3 {
@@ -247,7 +247,7 @@
 /*RESPONSIVENESS STYLING */
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 730px) {
   
   .main {
     /* min-height: calc(100vh - 6.25rem); 
@@ -512,7 +512,7 @@
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 111.25rem) {
+@media (min-width: 731px) and (max-width: 111.25rem) {
   .main {
     min-height: calc(100vh - 6.25rem); 
     max-width: 1920px; /*Added to limit width*/
@@ -629,7 +629,7 @@
   }
   
   .learnImg {
-    width: 80%;
+    width: 95%;
     height: auto;
     border-radius: 0.188rem;
   }
