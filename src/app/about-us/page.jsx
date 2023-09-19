@@ -42,8 +42,8 @@ const About = () => {
             {aboutUsContent.bulletHeading}
           </h2>
           <ul className={styles.bulletText}>
-            {aboutUsContent.bullets.map((bullet) => (
-              <li>{bullet}</li>
+            {aboutUsContent.bullets.map((bullet, index) => (
+              <li key={index}>{bullet}</li>
             ))}
           </ul>
         </section>
