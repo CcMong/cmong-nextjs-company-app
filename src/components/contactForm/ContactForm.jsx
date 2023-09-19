@@ -62,7 +62,7 @@ const ContactForm = () => {
 
         console.log(data);
                
-        // // While the form is being submitted, we want to show a loading state
+        // While the form is being submitted, we want to show a loading state
 
         setSubmitting(true);
 
@@ -98,11 +98,13 @@ const ContactForm = () => {
     
     return (
 
+        // When the form is successfully submitted, the relevant component will be shown to the user:
+
       submitted ? <div><Submitted /></div> 
       
       :
 
-
+        // Otherwise, they will see the contact form:
         
         <form 
             className={styles.container}
@@ -320,3 +322,72 @@ const ContactForm = () => {
 }
 
 export default ContactForm;
+
+// With more time, and as a basis for improvement, I would have undertaken and tested a more bespoke validation of the form. My code/pseudocode is shown below:
+
+// // Functions to validate Form Inputs
+/*-------------------------------------- */
+
+// const isValidEmail = (email) => {
+//     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+// }
+
+// const isValidPhoneNumber = (phoneNumber) => {
+//     return phoneNumber.trim().length <= 20 && phoneNumber.trim() !== '';
+// };
+
+// const isValidUKPostcode = (postcode) => {        
+//     return /^[A-Z]{1,2}\d{1,2}[A-Z]?\s?\d[A-Z]{2}$/.test(postcode);
+// };
+
+// Function for Form Validation
+/*----------------------------- */
+
+// const validateForm = () => {
+
+//     // Set aside an empty object to accept any validation errors
+
+//     const validationErrors = {};
+
+//     if(!formInputs.FullName.trim()) { 
+//         validationErrors.FullName = "Required";
+//     }
+
+//     if(!formInputs.EmailAddress.trim() || !isValidEmail(formInputs.EmailAddress)){
+//         validationErrors.EmailAddress = "Invalid_Email_Address";
+//     }
+
+//     if(formInputs.PhoneNumbers.some(phoneNumber => !isValidPhoneNumber(phoneNumber))) {
+//         validationErrors.PhoneNumbers = "Invalid_Phone_Number";            
+//     }
+
+//     if(formInputs.Message.length > 500) {
+//         validationErrors.Message = "Max_Length_Exceeded";            
+//     }
+
+//     if(checked && !formInputs.AddressDetails.AddressLine1.trim()) {
+//         validationErrors.AddressLine1 = "Required";
+//     }
+
+//     if(checked && !formInputs.AddressDetails.CityTown.trim()) {
+//         validationErrors.CityTown = "Required";
+//     }
+
+//     if(checked && !formInputs.AddressDetails.StateCounty.trim()) {
+//         validationErrors.StateCounty = "Required";
+//     }
+
+//     if(checked && formInputs.AddressDetails.Postcode.trim() && !isValidUKPostcode(formInputs.AddressDetails.Postcode)) {
+//         validationErrors.Postcode = "Invalid_Postcode";
+//     }
+
+//     if(checked && !formInputs.AddressDetails.Country.trim()) {
+//         validationErrors.Country = "Required";
+//     }
+
+//     return validationErrors;
+// }
+
+/************************************************** */
+
+// Then I would call this validateForm() function within the handleFormSubmit function in the first instance, to validate the form before further operations can take place.
