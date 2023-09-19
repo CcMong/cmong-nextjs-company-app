@@ -82,7 +82,7 @@ const Hero = () => {
                         <Image src={arrowIcon} height={10} alt="left-pointing arrow icon"/>
                     </div>
                     {heroData.Details.map((detail, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} className={styles.slider}>
                         <div className={styles.heroContent}>
                             <div className="gradient"></div>
                             <div className="bannerContentBox">
