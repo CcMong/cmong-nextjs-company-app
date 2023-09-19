@@ -2,20 +2,24 @@ import React from 'react';
 import styles from "./page.module.css";
 import ContactForm from '@/components/contactForm/ContactForm';
 import ContactBrand from '@/components/contactBrand/ContactBrand';
+import { contactUsContent } from '../data/data';
 
 const Contact = () => {
   return (
     <main className={styles.container}>
       <div className={styles.contactContainer}>
         <div className={styles.form}>
-          <div className={styles.heading}>Contact us</div>
+          <div className={styles.heading}>{contactUsContent.heading}</div>
           <p className={styles.formText}>
-            Populo facilisi nam no, dolor delenti deseruisse ne cum, nam quodsi aliquam eligendi ne. Ferri euismod accusata te nec, summo accumsan at vix.
+            {contactUsContent.foretext}
           </p>
           <ContactForm />
         </div>
         
-        <ContactBrand />
+        <div className={styles.brand}>
+          <ContactBrand />
+        </div>
+        
       </div>
       
     </main>

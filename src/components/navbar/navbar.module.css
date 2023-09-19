@@ -1,11 +1,11 @@
 .container {
-    height: 60px;
+    height: 3.75rem;
     /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px; 
-    border-bottom: 1.5px solid rgba(211, 211, 211, 0.5);
+    padding: 0 10%; /*c. 12.5rem*/
+    border-bottom: 0.094rem solid rgba(211, 211, 211, 0.5);
     position: fixed;
     top: 0px;
     right: 0px;
@@ -15,29 +15,37 @@
     z-index: 99;
 }
 
+.hamburger {
+    display: none;
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
 .links {
     display: flex;
     align-items: center;
-    gap: 40px;
-    font-size: 12px;
-    letter-spacing: 3px;
+    gap: 2.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.188rem;
     font-weight: 500;
 }
 
 .link:hover {
-    border-bottom: 2px solid slategray;
+    border-bottom: 0.125rem solid slategray;
     scale: 105%;
     transition-duration: 0.4s;
 }
 
 .login {
-    padding: 12px 35px;
-    font-size: 12px;
+    padding: 0.75rem 2.188rem;
+    font-size: 0.75rem;
     font-weight: 700;
     color:steelblue;
     background-color:rgba(137, 173, 246, 0.151);
     border: none;
-    border-radius: 3px;
+    border-radius: 0.188rem;
     font-family: inherit;
     cursor: pointer;
     transition-duration: 0.4s;
@@ -48,4 +56,193 @@
     background-color: rgba(137, 173, 246, 0.326);
 }
 
-/*RESPONSIVENESS STYLING TO COME*/
+/*RESPONSIVENESS STYLING*/
+
+/* Mobiles up to tablets. Here, I used iPad dimensions for the breakpoint*/
+
+@media (max-width: 810px) { 
+    .container {
+        height: 3.75rem;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10%; /*c. 12.5rem*/
+        border-bottom: 0.094rem solid rgba(211, 211, 211, 0.5);
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        background-color: var(--background-color);
+        opacity: 1;
+        z-index: 99;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        margin-right: auto;
+        cursor: pointer;
+        transition-duration: 300ms;
+    }
+
+    .hamburgerTopOpen, .hamburgerTopClosed, .hamburgerBottomOpen, .hamburgerBottomClosed, .hamburgerMiddleOpen, .hamburgerMiddleClosed {
+        background-color: slategray;
+        height: 0.125rem;
+        width: 1.5rem;
+        display: block;
+        border-radius: 0.25rem;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+
+    .hamburgerTopOpen {
+        rotate: 45deg;
+        transform: translateY(5px);
+    }
+
+    .hamburgerTopClosed {
+        --tw-translate-y: -0.125rem/* -2px */;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .hamburgerBottomOpen {
+        rotate: -45deg;
+        transform: translateY(-6px)
+    }
+
+    .hamburgerBottomClosed {
+        --tw-translate-y: 0.125rem/* -2px */;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .hamburgerMiddleOpen {
+        margin-top: 0.125rem/* 2px */;
+        margin-bottom: 0.125rem/* 2px */;
+        opacity: 0;
+
+    }
+
+    .hamburgerMiddleClosed {
+        margin-top: 0.125rem/* 2px */;
+        margin-bottom: 0.125rem/* 2px */;
+        opacity: 100;
+
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .hamburgerMenu {
+        width: 60%;
+        height: 50vh;
+        background-color: rgba(231, 225, 225, 0.957);
+        filter: blur();
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        top: 60px;
+        left: 0px;
+        position: fixed;
+        /* gap: 10px; */
+        padding-top: 20px;
+        border-radius: 0.188rem;
+        transition-duration: 0.4s;
+
+    }
+
+    
+    .links {
+        display: none;
+    }
+    
+    .link:hover {
+        border-bottom: 0.125rem solid slategray;
+        scale: 105%;
+        transition-duration: 0.4s;
+    }
+    
+    .login {
+        padding: 0.75rem 2.188rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color:whitesmoke;
+        background-color:steelblue;
+        border: none;
+        border-radius: 0.188rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    
+    .login:hover {
+        scale: 105%;
+        background-color: rgba(137, 173, 246, 0.326);
+    }
+
+}
+
+@media (min-width: 811px) and (max-width: 111.25rem) {
+    .container {
+        height: 3.75rem;
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10%; /*c. 12.5rem*/
+        border-bottom: 0.094rem solid rgba(211, 211, 211, 0.5);
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        background-color: var(--background-color);
+        opacity: 1;
+        z-index: 99;
+    }
+
+    
+    
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.188rem;
+        font-weight: 500;
+    }
+    
+    .link:hover {
+        border-bottom: 0.125rem solid slategray;
+        scale: 105%;
+        transition-duration: 0.4s;
+    }
+    
+    .login {
+        padding: 0.75rem 2.188rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color:steelblue;
+        background-color:rgba(137, 173, 246, 0.151);
+        border: none;
+        border-radius: 0.188rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    
+    .login:hover {
+        scale: 105%;
+        background-color: rgba(137, 173, 246, 0.326);
+    }
+
+}

@@ -1,5 +1,5 @@
 .main {
-  min-height: calc(100vh - 100px); 
+  min-height: calc(100vh - 6.25rem); 
   max-width: 1920px; /*Added to limit width*/
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 
 .heroCarousel {
   width: 100vw;
-  min-height: calc(100vh - 100px); /*Keeps the area intact during loading*/
+  min-height: calc(100vh - 6.25rem); /*Keeps the area intact during loading*/
   background-color: rgba(128, 128, 128, 0.258);
   position: relative;
 }
@@ -41,13 +41,15 @@
 }
 
 .section2 {
-  height: 400px;
+  min-height: 25rem;
   width: 99vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .learnContent {
@@ -55,28 +57,28 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;  
-  gap: 20px;
+  width: 50%;  
+  gap: 1.25rem;
 }
 
 .learnTitle {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 .learnText {
-  font-size: 12px;
+  font-size: 0.75rem;
   word-spacing: 1px;
-  /* letter-spacing: 0.25px; */
-  line-height: 20px;
+  /* letter-spacing: 0.1.563rem; */
+  line-height: 1.25rem;
 }
 
 .learnBullet {
-  font-size: 12px;
-  word-spacing: 1px;
+  font-size: 0.75rem;
+  word-spacing: 0.063rem;
   font-weight: bold;
-  line-height: 25px;
-  padding-left: 10px;
+  line-height: 1.563rem;
+  padding-left: 0.625rem;
 }
 
 .learnButton {
@@ -84,14 +86,14 @@
     background-color:steelblue;
     color: whitesmoke;
     border: none;
-    border-radius: 3px;
-    padding: 12px 25px;
-    font-size: 12px;
+    border-radius: 0.188rem;
+    padding: 0.75rem 1.563rem;
+    font-size: 0.75rem;
     font-weight: 700;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 10px 0;
+    gap: 1.25rem;
+    margin: 0.625rem 0;
     transition-duration: 0.4s;
 }
 
@@ -101,29 +103,34 @@
 }
 
 .imgContainer { 
-  margin-top: 80px;
-  margin-bottom: 80px;
-  margin-left: 100px;
+  /* margin-top: 80px;
+  margin-bottom: 80px; */
+  /* margin-left: 6.25rem; */
+  display: flex;
+  justify-content: flex-end;
+  /* height: 80%; */
+  width: 50%;
+
 }
 
 .learnImg {
-  width: 100%;
+  width: 80%;
   height: auto;
-  border-radius: 3px;
+  border-radius: 0.188rem;
 }
 
 .section3 {
-  height: 380px;
+  height: 25rem;
   width: 100vw; 
 }
 
 .panImgWrapper {
   max-width: 100vw;
-  height: 380px;
+  height: 23.75rem;
   position: relative;
   background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
   background-size: cover;
-  padding-left: 100px;
+  padding-left: 10%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -136,8 +143,8 @@
   z-index: 9 !important;
   background-color: rgb(115, 106, 106);
   color: rgba(255, 255, 255, 0.756);
-  border-radius: 3px;
-  padding: 25px;
+  border-radius: 0.188rem;
+  padding: 1.563rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -145,13 +152,13 @@
 }
 
 .loginTitle {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 .loginText {
-  font-size: 11px;
-  line-height: 20px;
+  font-size: 0.688rem;
+  line-height: 1.25rem;
 }
 
 .loginButton {
@@ -159,14 +166,14 @@
   color:steelblue;
   background-color:rgb(227, 233, 244);
     border: none;
-    border-radius: 3px;
-    padding: 12px 40px;
-    font-size: 12px;
+    border-radius: 0.188rem;
+    padding: 0.75rem 2.5rem;
+    font-size: 0.75rem;
     font-weight: 700;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 10px 0;
+    gap: 1.25rem;
+    margin: 0.625rem 0;
     transition-duration: 0.4s;
 }
 
@@ -176,37 +183,37 @@
 }
 
 .section4{
-  height: 500px;
+  height: 31.25rem;
   width: 100vw;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  gap: 10px;
+  padding-top: 2.5rem;
+  gap: 0.625rem;
 }
 
 .sec4Title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 .sec4Subtitle {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .multicol {
   column-count: 3;
-  margin-top: 15px;
-  column-gap: 25px;
+  margin-top: 0.938rem;
+  column-gap: 1.563rem;
 }
 
 .sec4Foretext, .sec4Text {
-  font-size: 11px;  
-  line-height: 20px;
-  margin-bottom: 10px;
+  font-size: 0.688rem;  
+  line-height: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
 .sec4Foretext {
@@ -218,14 +225,14 @@
     background-color:steelblue;
     color: whitesmoke;
     border: none;
-    border-radius: 3px;
-    padding: 12px 25px;
-    font-size: 12px;
+    border-radius: 0.188rem;
+    padding: 0.75rem 1.563rem;
+    font-size: 0.75rem;
     font-weight: 700;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin: 10px 0;
+    gap: 1.25rem;
+    margin: 0.625rem 0;
     transition-duration: 0.4s;
 }
 
@@ -236,92 +243,498 @@
 
 
 
-
-
-
 /*RESPONSIVENESS STYLING */
 
 /* Mobile */
 @media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+  .main {
+    min-height: calc(100vh - 6.25rem); 
+    max-width: 1920px; /*Added to limit width*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
   }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+  
+  .heroCarousel {
+    width: 100vw;
+    min-height: calc(100vh - 6.25rem); /*Keeps the area intact during loading*/
+    background-color: rgba(128, 128, 128, 0.258);
+    position: relative;
   }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
+  
+  .loadingModal {
+    position: absolute;  
+    height: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
     align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
+    background: linear-gradient(to right, black, darkgray);
   }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  
+  .modalImg {
+    -webkit-animation: rotation 3s infinite linear;
+    -moz-animation: rotation 3s infinite linear;
+    animation: rotation 3s infinite linear;
   }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  .section2 {
+    min-height: 25rem;
+    width: 99vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  
+  .learnContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;  
+    gap: 1.25rem;
+  }
+  
+  .learnTitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .learnText {
+    font-size: 0.75rem;
+    word-spacing: 1px;
+    /* letter-spacing: 0.1.563rem; */
+    line-height: 1.25rem;
+  }
+  
+  .learnBullet {
+    font-size: 0.75rem;
+    word-spacing: 0.063rem;
+    font-weight: bold;
+    line-height: 1.563rem;
+    padding-left: 0.625rem;
+  }
+  
+  .learnButton {
+    cursor: pointer;
+      background-color:steelblue;
+      color: whitesmoke;
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 1.563rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 0.625rem 0;
+      transition-duration: 0.4s;
+  }
+  
+  .learnButton:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
+  }
+  
+  .imgContainer { 
+    /* margin-top: 80px;
+    margin-bottom: 80px; */
+    /* margin-left: 6.25rem; */
+    display: flex;
+    justify-content: flex-end;
+    /* height: 80%; */
+    width: 50%;
+  
+  }
+  
+  .learnImg {
+    width: 80%;
+    height: auto;
+    border-radius: 0.188rem;
+  }
+  
+  .section3 {
+    height: 25rem;
+    width: 100vw; 
+  }
+  
+  .panImgWrapper {
+    max-width: 100vw;
+    height: 23.75rem;
+    position: relative;
+    background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
+    background-size: cover;
+    padding-left: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .loginContent {
+    position: absolute;
+    height: 75%;
+    width: 40%;
+    z-index: 9 !important;
+    background-color: rgb(115, 106, 106);
+    color: rgba(255, 255, 255, 0.756);
+    border-radius: 0.188rem;
+    padding: 1.563rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .loginTitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .loginText {
+    font-size: 0.688rem;
+    line-height: 1.25rem;
+  }
+  
+  .loginButton {
+    cursor: pointer;
+    color:steelblue;
+    background-color:rgb(227, 233, 244);
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 2.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 0.625rem 0;
+      transition-duration: 0.4s;
+  }
+  
+  .loginButton:hover {
+    scale: 105%;
+    background-color:rgb(165, 189, 234);
+  }
+  
+  .section4{
+    height: 31.25rem;
+    width: 100vw;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+    gap: 0.625rem;
+  }
+  
+  .sec4Title {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .sec4Subtitle {
+    font-weight: 600;
+    font-size: 0.938rem;
+  }
+  
+  .multicol {
+    column-count: 3;
+    margin-top: 0.938rem;
+    column-gap: 1.563rem;
+  }
+  
+  .sec4Foretext, .sec4Text {
+    font-size: 0.688rem;  
+    line-height: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .sec4Foretext {
+    font-weight: 700;
+  }
+  
+  .sec4Button {
+    cursor: pointer;
+      background-color:steelblue;
+      color: whitesmoke;
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 1.563rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 0.625rem 0;
+      transition-duration: 0.4s;
+  }
+  
+  .sec4Button:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
+  }
+  
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
+@media (min-width: 701px) and (max-width: 111.25rem) {
+  .main {
+    min-height: calc(100vh - 6.25rem); 
+    max-width: 1920px; /*Added to limit width*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
+  }
+  
+  .heroCarousel {
+    width: 100vw;
+    min-height: calc(100vh - 6.25rem); /*Keeps the area intact during loading*/
+    background-color: rgba(128, 128, 128, 0.258);
+    position: relative;
+  }
+  
+  .loadingModal {
+    position: absolute;  
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, black, darkgray);
+  }
+  
+  .modalImg {
+    -webkit-animation: rotation 3s infinite linear;
+    -moz-animation: rotation 3s infinite linear;
+    animation: rotation 3s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  .section2 {
+    min-height: 25rem;
+    width: 99vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+  
+  .learnContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;  
+    gap: 1.25rem;
+  }
+  
+  .learnTitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .learnText {
+    font-size: 0.75rem;
+    word-spacing: 1px;
+    /* letter-spacing: 0.1.563rem; */
+    line-height: 1.25rem;
+  }
+  
+  .learnBullet {
+    font-size: 0.75rem;
+    word-spacing: 0.063rem;
+    font-weight: bold;
+    line-height: 1.563rem;
+    padding-left: 0.625rem;
+  }
+  
+  .learnButton {
+    cursor: pointer;
+      background-color:steelblue;
+      color: whitesmoke;
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 1.563rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 0.625rem 0;
+      transition-duration: 0.4s;
+  }
+  
+  .learnButton:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
+  }
+  
+  .imgContainer { 
+    /* margin-top: 80px;
+    margin-bottom: 80px; */
+    /* margin-left: 6.25rem; */
+    display: flex;
+    justify-content: flex-end;
+    /* height: 80%; */
+    width: 50%;
+  
+  }
+  
+  .learnImg {
+    width: 80%;
+    height: auto;
+    border-radius: 0.188rem;
+  }
+  
+  .section3 {
+    height: 25rem;
+    width: 100vw; 
+  }
+  
+  .panImgWrapper {
+    max-width: 100vw;
+    height: 23.75rem;
+    position: relative;
+    background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
+    background-size: cover;
+    padding-left: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .loginContent {
+    position: absolute;
+    height: 75%;
+    width: 40%;
+    z-index: 9 !important;
+    background-color: rgb(115, 106, 106);
+    color: rgba(255, 255, 255, 0.756);
+    border-radius: 0.188rem;
+    padding: 1.563rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .loginTitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .loginText {
+    font-size: 0.688rem;
+    line-height: 1.25rem;
+  }
+  
+  .loginButton {
+    cursor: pointer;
+    color:steelblue;
+    background-color:rgb(227, 233, 244);
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 2.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 0.625rem 0;
+      transition-duration: 0.4s;
+  }
+  
+  .loginButton:hover {
+    scale: 105%;
+    background-color:rgb(165, 189, 234);
+  }
+  
+  .section4{
+    height: 31.25rem;
+    width: 100vw;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+    gap: 0.625rem;
+  }
+  
+  .sec4Title {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .sec4Subtitle {
+    font-weight: 600;
+    font-size: 0.938rem;
+  }
+  
+  .multicol {
+    column-count: 3;
+    margin-top: 0.938rem;
+    column-gap: 1.563rem;
+  }
+  
+  .sec4Foretext, .sec4Text {
+    font-size: 0.688rem;  
+    line-height: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .sec4Foretext {
+    font-weight: 700;
+  }
+  
+  .sec4Button {
+    cursor: pointer;
+      background-color:steelblue;
+      color: whitesmoke;
+      border: none;
+      border-radius: 0.188rem;
+      padding: 0.75rem 1.563rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 0.625rem 0;
+      transition-duration: 0.4s;
+  }
+  
+  .sec4Button:hover {
+    scale: 105%;
+    background-color: rgb(56, 105, 145);
   }
 }
 

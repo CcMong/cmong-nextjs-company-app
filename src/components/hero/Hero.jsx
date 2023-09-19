@@ -14,13 +14,8 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
 import styles from './hero.module.css';
-import testimage from "../../../public/carousel_1.jpg"
 import arrowIcon from "../../../public/Icon_Arrow.svg"
 import Link from 'next/link';
-
-
-// initialise swiper modules
-// SwiperCore.use([Pagination, Autoplay]);
 
 
 const Hero = () => {
@@ -81,7 +76,7 @@ const Hero = () => {
                     className={styles.carouselContainer}
                 >                    
                     <div className="swiperButton swiperButtonNext">
-                        <Image src={arrowIcon} height={10}/>
+                        <Image src={arrowIcon} height={10} alt="right-pointing arrow icon"/>
                     </div>
                     <div className="swiperButton swiperButtonBack">
                         <Image src={arrowIcon} height={10} alt="left-pointing arrow icon"/>
@@ -106,7 +101,7 @@ const Hero = () => {
                                 sizes='100vw'
                                 alt="Hero banner image"
                                 className={index === 0 ? styles.heroImage1 : index === 1 ? styles.heroImage2 : styles.heroImage3}
-                            />                                
+                            />                          
                         </div>                         
                     </SwiperSlide>                        
                     ))}                        

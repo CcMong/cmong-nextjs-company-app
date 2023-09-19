@@ -26,11 +26,11 @@ export default function Home() {
             {homePageContent.section2.body}
           </p>
           <ul className={styles.learnBullet}>
-            {homePageContent.section2.bullets.map((bullet) => (
-              <li>{bullet}</li>
+            {homePageContent.section2.bullets.map((bullet, index) => (
+              <li key={index}>{bullet}</li>
             ))}            
           </ul>
-          <Link href="/contact-us">
+          <Link href="/about-us">
             <button type='button' className={styles.learnButton}>Learn More</button>
           </Link>
 
@@ -56,7 +56,10 @@ export default function Home() {
             <p className={styles.loginText}>
               {homePageContent.section3.body}
             </p>
-            <button type="button" className={styles.loginButton}>Log in</button>
+            <Link href="/login">
+              <button type="button" className={styles.loginButton}>Log in</button>
+            </Link>
+            
           </div>
         </div>         
         
@@ -73,18 +76,18 @@ export default function Home() {
           <p className={styles.sec4Foretext}>
             {homePageContent.section4.foretext}
           </p>
-          {homePageContent.section4.paragraphs.map((paragraph) => (
-            <p className={styles.sec4Text}>
+          {homePageContent.section4.paragraphs.map((paragraph, index) => (
+            <p className={styles.sec4Text} key={index}>
               {paragraph}
             </p>
           ))}
         </div>
 
-        <button className={styles.sec4Button}>Contact us</button>
-        
+        <Link href="/contact-us">
+          <button className={styles.sec4Button}>Contact us</button>        
+        </Link>       
         
       </section>
-
       
     </main>
   )

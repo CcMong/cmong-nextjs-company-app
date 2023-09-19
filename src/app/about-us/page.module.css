@@ -1,26 +1,26 @@
 .container {
     max-width: 1920px;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    min-height: calc(100vh - 60px);
+    padding-top: 6.25rem;
+    padding-bottom: 3.125rem;
+    min-height: calc(100vh - 3.75rem);
     color: inherit;
 }
 
 .aboutContent {
     width: 100vw;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .aboutHeading {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 3.125rem;
 }
 
 .aboutText {
-    line-height: 20px;
-    font-size: 11px;
+    line-height: 1.25rem;
+    font-size: 0.688rem;
 }
 
 .foreText {
@@ -28,7 +28,7 @@
 }
 
 .bodyText {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .blueText {
@@ -40,23 +40,161 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 1.875rem;
 }
 
 .centralImage {
-    border-radius: 3px;
+    border-radius: 0.188rem;
+    height: auto;
+    width: 80vw;
+    max-width: 600px;
 }
 
 .bulletHeading {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .bulletText {
-    font-size: 12px;
+    font-size: 0.688rem;
   word-spacing: 1px;
   font-weight: bold;
-  line-height: 25px;
-  padding-left: 10px;
-  margin: 20px 0px;
+  line-height: 1.563rem;
+  padding-left: 0.625rem;
+  margin: 1.25rem 0px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 1920px;
+        padding-top: 6.25rem;
+        padding-bottom: 3.125rem;
+        min-height: calc(100vh - 3.75rem);
+        color: inherit;
+    }
+    
+    .aboutContent {
+        width: 100vw;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .aboutHeading {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 3.125rem;
+    }
+    
+    .aboutText {
+        line-height: 1.25rem;
+        font-size: 0.688rem;
+    }
+    
+    .foreText {
+        font-weight: 700;
+    }
+    
+    .bodyText {
+        margin-bottom: 1.25rem;
+    }
+    
+    .blueText {
+        text-decoration: underline;
+        color: royalblue;
+    }
+    
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.875rem;
+    }
+    
+    .centralImage {
+        border-radius: 0.188rem;
+        height: auto;
+        width: 80vw;
+    }
+    
+    .bulletHeading {
+      font-weight: 600;
+      font-size: 0.938rem;
+    }
+    
+    .bulletText {
+        font-size: 0.688rem;
+      word-spacing: 1px;
+      font-weight: bold;
+      line-height: 1.563rem;
+      padding-left: 0.625rem;
+      margin: 1.25rem 0px;
+    }
+
+}
+
+@media (min-width: 701px) and (max-width: 111.25rem) {
+
+    .container {
+        max-width: 1920px;
+        padding-top: 6.25rem;
+        padding-bottom: 3.125rem;
+        min-height: calc(100vh - 3.75rem);
+        color: inherit;
+    }
+    
+    .aboutContent {
+        width: 100vw;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .aboutHeading {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 3.125rem;
+    }
+    
+    .aboutText {
+        line-height: 1.25rem;
+        font-size: 0.688rem;
+    }
+    
+    .foreText {
+        font-weight: 700;
+    }
+    
+    .bodyText {
+        margin-bottom: 1.25rem;
+    }
+    
+    .blueText {
+        text-decoration: underline;
+        color: royalblue;
+    }
+    
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.875rem;
+    }
+    
+    .centralImage {
+        border-radius: 0.188rem;
+    }
+    
+    .bulletHeading {
+      font-weight: 600;
+      font-size: 0.938rem;
+    }
+    
+    .bulletText {
+        font-size: 0.688rem;
+      word-spacing: 1px;
+      font-weight: bold;
+      line-height: 1.563rem;
+      padding-left: 0.625rem;
+      margin: 1.25rem 0px;
+    }
+
 }
