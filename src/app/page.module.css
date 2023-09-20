@@ -121,13 +121,13 @@
 }
 
 .section3 {
-  height: 25rem;
+  height: 28.125rem;
   width: 100vw; 
 }
 
 .panImgWrapper {
   max-width: 100vw;
-  height: 23.75rem;
+  height: 28.125rem;
   position: relative;
   background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
   background-size: cover;
@@ -584,7 +584,6 @@
   .learnText {
     font-size: 0.75rem;
     word-spacing: 1px;
-    /* letter-spacing: 0.1.563rem; */
     line-height: 1.25rem;
   }
   
@@ -635,13 +634,13 @@
   }
   
   .section3 {
-    height: 25rem;
+    height: 28.125rem;
     width: 100vw; 
   }
   
   .panImgWrapper {
     max-width: 100vw;
-    height: 23.75rem;
+    height: 28.125rem;
     position: relative;
     background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
     background-size: cover;
@@ -653,7 +652,7 @@
   
   .loginContent {
     position: absolute;
-    height: 75%;
+    height: 80%;
     width: 40%;
     z-index: 9 !important;
     background-color: rgb(115, 106, 106);

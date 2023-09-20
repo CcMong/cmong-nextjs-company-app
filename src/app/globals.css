@@ -313,7 +313,7 @@ a {
     color: white;
     z-index: 100 !important;
     height: 50%;
-    width: 40%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;  
@@ -321,6 +321,8 @@ a {
     margin-top: 5%;
     margin-left: 10%;
     padding-right: 6.25rem;
+    left: 0.1px;
+    top: 5%;
   }
   
   .bannerTitle {
@@ -332,7 +334,7 @@ a {
   .bannerSubtitle {
     margin: 0.625rem 0px;
     font-size: 0.938;
-    padding-right: 3.125rem;
+    /* padding-right: 3.125rem; */
     line-height: 1.875rem;
   }
   
