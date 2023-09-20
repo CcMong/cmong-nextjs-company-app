@@ -86,21 +86,12 @@ const ContactForm = () => {
             if(validationErrorsArray) {
                 setApiValidated(false);
 
-                // const isolatedValidationErrors = []; // just the error parts from each object in one array
-
-                // validationErrorsArray.map((errorObject) => (
-                //     (errorObject["MessageCode"]).push(isolatedValidationErrors)
-                // ));
-
                 setAllValidationErrors(validationErrorsArray);
 
             }
 
-
-
             if(!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.Status}`)
-
+                throw new Error(`HTTP error! Status: ${response.status}`)
             }
 
             // if everything is okay with the request:

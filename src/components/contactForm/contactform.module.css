@@ -119,8 +119,6 @@
 .grid {
     display: flex;
     justify-content: space-between;
-    /* display: grid;
-    grid-template-columns: repeat(4, minmax(25%, auto)); */
     max-width: 89%;
     gap: 1.25rem;
     margin: 0.625rem 0;
