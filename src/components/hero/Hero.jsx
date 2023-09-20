@@ -104,11 +104,10 @@ const Hero = () => {
                             />                          
                         </div>                         
                     </SwiperSlide>                        
-                    ))}                        
+                    ))}                       
                     
                 </Swiper>                
-            </div>
-            
+            </div>            
         )}       
     </div>
   )

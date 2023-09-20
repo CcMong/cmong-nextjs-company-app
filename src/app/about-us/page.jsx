@@ -4,6 +4,11 @@ import Image from 'next/image';
 import centralImage from "../../../public/learn_more_section.jpg"
 import { aboutUsContent } from '../data/data';
 
+export const metadata = {
+  title: 'About Us | Company Ltd.',
+  description: 'About Company Ltd., Creative Design Agency',
+}
+
 
 const About = () => {
   return (

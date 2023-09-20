@@ -35,7 +35,8 @@ const ContactForm = () => {
 
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const [errors, setErrors] = useState({});
+    const [apiValidated, setApiValidated] = useState(true);
+    const [allValidationErrors, setAllValidationErrors] = useState([])
 
     
     /*Function for handling changes in the form inputs */
@@ -75,14 +76,36 @@ const ContactForm = () => {
                 body: JSON.stringify(data),
             });
 
+            // Getting the response as soon as the form is submitted: 
+
+            const responseData1 = await response.json();
+            const validationErrorsArray = responseData1.Errors; // Errors received from the API
+            console.log(responseData1);
+            console.log(validationErrorsArray);
+
+            if(validationErrorsArray) {
+                setApiValidated(false);
+
+                // const isolatedValidationErrors = []; // just the error parts from each object in one array
+
+                // validationErrorsArray.map((errorObject) => (
+                //     (errorObject["MessageCode"]).push(isolatedValidationErrors)
+                // ));
+
+                setAllValidationErrors(validationErrorsArray);
+
+            }
+
+
+
             if(!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.Status}`)
+                throw new Error(`HTTP error! Status: ${response.Status}`)
+
             }
 
             // if everything is okay with the request:
 
-            const responseData = await response.json();
-            console.log(responseData);
+            console.log(responseData1);
 
             setSubmitted(true);
             setFormInputs(initialFormInputs); // Clears the form fields
@@ -93,12 +116,13 @@ const ContactForm = () => {
 
         } finally {
             setSubmitting(false);
+            setApiValidated(true);
         };        
     };
     
     return (
 
-        // When the form is successfully submitted, the relevant component will be shown to the user:
+        // When the form is successfully submitted, the valid submission component will be shown to the user:
 
       submitted ? <div><Submitted /></div> 
       
@@ -110,6 +134,13 @@ const ContactForm = () => {
             className={styles.container}
             onSubmit={handleFormSubmit}            
         >
+            {/* Error message to appear at the top of the form to alert user */}
+            {allValidationErrors && <div>{allValidationErrors.map((validationErrorObject) => (
+                <p className={styles.userError}>{`* ${validationErrorObject.MessageCode === "Invalid_Email_Address" ? "Please provide a valid email address" 
+                : validationErrorObject.MessageCode === "Invalid_Phone_Number" ? "Phone number is invalid. Cannot exceed 20 characters, and cannot be null or empty" 
+                : validationErrorObject.MessageCode === "Max_Length_Exceeded" ? "The message provided exceeds the maximum length allowed of 500 characters" 
+                : validationErrorObject.MessageCode === "Invalid_Postcode" ? "Please enter a valid UK postcode" : ""}`}</p>
+            ))}</div>}
 
             {/*Fullname and Email */}
             <div className={styles.input_group}>
@@ -154,6 +185,7 @@ const ContactForm = () => {
                             value={phoneNumber}
                             className={styles.inputField}
                             onChange={(e) => handleChange(e, index)}
+                            maxLength={20} // Cannot exceed 20 characters
                         />
                     </div>
                 ))}
@@ -182,6 +214,7 @@ const ContactForm = () => {
                         className={styles.textarea}
                         onChange={(e) => setFormInputs({ ...formInputs, Message: e.target.value })}
                         required
+                        maxLength={500}
                     />
                 </div>
             </div>
@@ -239,7 +272,7 @@ const ContactForm = () => {
                     </div>
                 </div>
 
-                {/*Address line 2*/}
+                {/*Address row 2*/}
 
                 <div className={styles.grid}>
                     <div className={styles.inputs}>
@@ -333,7 +366,7 @@ export default ContactForm;
 // }
 
 // const isValidPhoneNumber = (phoneNumber) => {
-//     return phoneNumber.trim().length <= 20 && phoneNumber.trim() !== '';
+//     return phoneNumber.trim().length <= 20 && phoneNumber.trim() !== '' && phoneNumber.trim() !== 0;
 // };
 
 // const isValidUKPostcode = (postcode) => {        

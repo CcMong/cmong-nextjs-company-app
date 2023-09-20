@@ -4,6 +4,11 @@ import ContactForm from '@/components/contactForm/ContactForm';
 import ContactBrand from '@/components/contactBrand/ContactBrand';
 import { contactUsContent } from '../data/data';
 
+export const metadata = {
+  title: 'Contact Us | Company Ltd.',
+  description: 'How to contact Company Ltd. We would love to hear from you.',
+}
+
 const Contact = () => {
   return (
     <main className={styles.container}>

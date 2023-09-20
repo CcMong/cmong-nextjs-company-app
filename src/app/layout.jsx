@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] });
 const openSans = Open_Sans({ subsets: ['latin']});
 
 export const metadata = {
-  title: 'Company Ltd. | Lorem Ipsum',
-  description: 'A Company Ltd. Application Created With Next.js 13',
+  title: 'Company Ltd. | Welcome',
+  description: 'Welcome to Company Ltd., a boutique Creative Design Agency',
 }
 
 export default function RootLayout({ children }) {

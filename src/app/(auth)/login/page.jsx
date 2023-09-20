@@ -3,6 +3,11 @@ import React from 'react';
 import styles from "./page.module.css"
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Login | Company Ltd.',
+  description: 'User Login page for Company Ltd. Application',
+}
+
 const Login = () => {
   return (
     <main className={styles.container}>

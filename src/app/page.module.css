@@ -5,12 +5,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
+  padding-top: 0px;
 }
 
 .heroCarousel {
   width: 100vw;
-  /* min-height: calc(100vh - 6.25rem); Keeps the area intact during loading */
   min-height: 70vh;
   background-color: rgba(128, 128, 128, 0.258);
   position: relative;
@@ -70,7 +69,6 @@
 .learnText {
   font-size: 0.75rem;
   word-spacing: 1px;
-  /* letter-spacing: 0.1.563rem; */
   line-height: 1.25rem;
 }
 
@@ -104,12 +102,8 @@
 }
 
 .imgContainer { 
-  /* margin-top: 80px;
-  margin-bottom: 80px; */
-  /* margin-left: 6.25rem; */
   display: flex;
   justify-content: flex-end;
-  /* height: 80%; */
   width: 50%;
 
 }
@@ -246,28 +240,27 @@
 
 /*RESPONSIVENESS STYLING */
 
-/* Mobile */
+/* Mobile and Tablets
+----------------------*/
+
 @media (max-width: 730px) {
   
   .main {
-    /* min-height: calc(100vh - 6.25rem); 
-    max-width: 1920px; Added to limit width */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
+    padding-top: 0px;
   }
   
   .heroCarousel {
     width: 100vw;
-    min-height: 70vh; /*Loading screen, grey part. Keeps the area intact during loading.*/
+    min-height: 70vh;
     background-color: rgba(128, 128, 128, 0.258);
     position: relative;
   }
   
   .loadingModal {
-    /* The actual screen with spinning logo */
     position: absolute;  
     height: 100%;
     width: 100vw;
@@ -322,7 +315,6 @@
   .learnText {
     font-size: 0.75rem;
     word-spacing: 1px;
-    /* letter-spacing: 0.1.563rem; */
     line-height: 1.25rem;
   }
   
@@ -343,8 +335,6 @@
       padding: 0.75rem 1.563rem;
       font-size: 0.75rem;
       font-weight: 700;
-      /* display: flex;
-      justify-content: center; */
       gap: 1.25rem;
       margin: 0.625rem 0;
       transition-duration: 0.4s;
@@ -362,12 +352,8 @@
   }
   
   .imgContainer { 
-    /* margin-top: 80px;
-    margin-bottom: 80px; */
-    /* margin-left: 6.25rem; */
     display: flex;
     justify-content: center;
-    /* height: 80%; */
     width: 100%;
     order: -1; /*Makes the image preferentially appear first at smaller viewport dimensions*/
     margin-bottom: 5%;
@@ -391,7 +377,6 @@
     position: relative;
     background-image: url("https://interview-assessment.api.avamae.co.uk/Images/swiper_image_3.jpg");
     background-size: cover;
-    /* padding-left: 10%; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -511,22 +496,23 @@
   
 }
 
-/* Tablet and Smaller Desktops */
+/* Tablet and Smaller Desktops 
+-------------------------------*/
 
 @media (min-width: 731px) and (max-width: 111.25rem) {
   .main {
     min-height: calc(100vh - 6.25rem); 
-    max-width: 1920px; /*Added to limit width*/
+    max-width: 1920px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0px; /*used to crop the hero at the top to match the mockup*/
+    padding-top: 0px;
   }
   
   .heroCarousel {
     width: 100vw;
-    min-height: calc(100vh - 6.25rem); /*Keeps the area intact during loading*/
+    min-height: calc(100vh - 6.25rem);
     background-color: rgba(128, 128, 128, 0.258);
     position: relative;
   }
@@ -694,7 +680,7 @@
   }
   
   .section4{
-    height: 31.25rem;
+    height: auto;
     width: 100vw;
     padding-left: 6.25rem;
     padding-right: 6.25rem;
