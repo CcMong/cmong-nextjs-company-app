@@ -135,8 +135,8 @@ const ContactForm = () => {
             onSubmit={handleFormSubmit}            
         >
             {/* Error message to appear at the top of the form to alert user */}
-            {allValidationErrors && <div>{allValidationErrors.map((validationErrorObject) => (
-                <p className={styles.userError}>{`* ${validationErrorObject.MessageCode === "Invalid_Email_Address" ? "Please provide a valid email address" 
+            {allValidationErrors && <div>{allValidationErrors.map((validationErrorObject, index) => (
+                <p key={index}className={styles.userError}>{`* ${validationErrorObject.MessageCode === "Invalid_Email_Address" ? "Please provide a valid email address" 
                 : validationErrorObject.MessageCode === "Invalid_Phone_Number" ? "Phone number is invalid. Cannot exceed 20 characters, and cannot be null or empty" 
                 : validationErrorObject.MessageCode === "Max_Length_Exceeded" ? "The message provided exceeds the maximum length allowed of 500 characters" 
                 : validationErrorObject.MessageCode === "Invalid_Postcode" ? "Please enter a valid UK postcode" : ""}`}</p>
