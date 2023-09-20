@@ -511,7 +511,8 @@
   
 }
 
-/* Tablet and Smaller Desktop */
+/* Tablet and Smaller Desktops */
+
 @media (min-width: 731px) and (max-width: 111.25rem) {
   .main {
     min-height: calc(100vh - 6.25rem); 
@@ -616,13 +617,9 @@
     background-color: rgb(56, 105, 145);
   }
   
-  .imgContainer { 
-    /* margin-top: 80px;
-    margin-bottom: 80px; */
-    /* margin-left: 6.25rem; */
+  .imgContainer {
     display: flex;
     justify-content: flex-end;
-    /* height: 80%; */
     width: 50%;
   
   }
@@ -756,21 +753,3 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
