@@ -80,8 +80,6 @@ const ContactForm = () => {
 
             const responseData1 = await response.json();
             const validationErrorsArray = responseData1.Errors; // Errors received from the API
-            console.log(responseData1);
-            console.log(validationErrorsArray);
 
             if(validationErrorsArray) {
                 setApiValidated(false);
@@ -95,8 +93,6 @@ const ContactForm = () => {
             }
 
             // if everything is okay with the request:
-
-            console.log(responseData1);
 
             setSubmitted(true);
             setFormInputs(initialFormInputs); // Clears the form fields
