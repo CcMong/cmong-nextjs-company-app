@@ -117,10 +117,10 @@
 }
 
 .grid {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25%, 1fr));
     max-width: 89%;
-    gap: 1.25rem;
+    gap: 4%;
     margin: 0.625rem 0;
 }
 
@@ -153,7 +153,7 @@
     transform: translateX(-500%);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 950px) {
 
     .container {
         font-size: 0.75rem;
@@ -274,7 +274,7 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(50%, auto));
         max-width: 95%;
-        gap: 1.25rem;
+        gap: 5%;
         margin: 0.625rem 0;
     }
     

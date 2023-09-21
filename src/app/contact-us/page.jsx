@@ -14,7 +14,9 @@ const Contact = () => {
     <main className={styles.container}>
       <div className={styles.contactContainer}>
         <div className={styles.form}>
-          <div className={styles.heading}>{contactUsContent.heading}</div>
+          <div className={styles.heading}>
+            {contactUsContent.heading}
+          </div>
           <p className={styles.formText}>
             {contactUsContent.foretext}
           </p>
